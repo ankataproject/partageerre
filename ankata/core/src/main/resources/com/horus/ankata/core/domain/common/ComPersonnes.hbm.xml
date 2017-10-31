@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.commons.ComPersonnes" table="com_personnes" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comCivilites" class="com.horus.ankata.core.domain.commons.ComCivilites" fetch="select">
+            <column name="civilite" length="5" />
+        </many-to-one>
+        <many-to-one name="comFonctions" class="com.horus.ankata.core.domain.commons.ComFonctions" fetch="select">
+            <column name="fonction" />
+        </many-to-one>
+        <many-to-one name="comPays" class="com.horus.ankata.core.domain.commons.ComPays" fetch="select">
+            <column name="pays_naissance" length="3" />
+        </many-to-one>
+        <many-to-one name="comSitFams" class="com.horus.ankata.core.domain.commons.ComSitFams" fetch="select">
+            <column name="situation_familiale" length="2" />
+        </many-to-one>
+        <many-to-one name="comStructures" class="com.horus.ankata.core.domain.commons.ComStructures" fetch="select">
+            <column name="structure" />
+        </many-to-one>
+        <property name="adrAdresse" type="string">
+            <column name="adr_adresse" length="200" />
+        </property>
+        <property name="adrBp" type="string">
+            <column name="adr_bp" length="20" />
+        </property>
+        <property name="adrEmail" type="string">
+            <column name="adr_email" length="200" />
+        </property>
+        <property name="adrFax" type="string">
+            <column name="adr_fax" length="200" />
+        </property>
+        <property name="adrTel1" type="string">
+            <column name="adr_tel1" length="100" />
+        </property>
+        <property name="adrTel2" type="string">
+            <column name="adr_tel2" length="200" />
+        </property>
+        <property name="adrVille" type="string">
+            <column name="adr_ville" length="200" />
+        </property>
+        <property name="dateEntree" type="date">
+            <column name="date_entree" length="10" />
+        </property>
+        <property name="dateNaissance" type="date">
+            <column name="date_naissance" length="10" />
+        </property>
+        <property name="dc" type="timestamp">
+            <column name="dc" length="19" />
+        </property>
+        <property name="du" type="timestamp">
+            <column name="du" length="19" />
+        </property>
+        <property name="estNeVers" type="java.lang.Boolean">
+            <column name="est_ne_vers" />
+        </property>
+        <property name="nationnalite" type="string">
+            <column name="nationnalite" length="50" />
+        </property>
+        <property name="naturePers" type="string">
+            <column name="nature_pers" length="2" />
+        </property>
+        <property name="neVers" type="string">
+            <column name="ne_vers" length="200" />
+        </property>
+        <property name="nom" type="string">
+            <column name="nom" length="200" />
+        </property>
+        <property name="nomComplet" type="string">
+            <column name="nom_complet" length="200" />
+        </property>
+        <property name="nordre" type="java.lang.Integer">
+            <column name="nordre" />
+        </property>
+        <property name="photo" type="string">
+            <column name="photo" length="200" />
+        </property>
+        <property name="prenom" type="string">
+            <column name="prenom" length="200" />
+        </property>
+        <property name="salaire" type="java.lang.Double">
+            <column name="salaire" precision="22" scale="0" />
+        </property>
+        <property name="sexe" type="string">
+            <column name="sexe" length="2" />
+        </property>
+        <property name="typePers" type="string">
+            <column name="type_pers" length="2" />
+        </property>
+        <property name="ucid" type="java.lang.Long">
+            <column name="ucid" />
+        </property>
+        <property name="uuid" type="java.lang.Long">
+            <column name="uuid" />
+        </property>
+        <property name="villeNaissance" type="string">
+            <column name="ville_naissance" length="200" />
+        </property>
+        <set name="fltAssurancesComps" table="flt_assurances_comp" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="personne" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltAssurancesComp" />
+        </set>
+        <set name="fltConducteurses" table="flt_conducteurs" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="personne" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltConducteurs" />
+        </set>
+        <set name="comClientses" table="com_clients" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="personne" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.commons.ComClients" />
+        </set>
+        <set name="comUserses" table="com_users" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="personne" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.commons.ComUsers" />
+        </set>
+        <set name="comFournisseurses" table="com_fournisseurs" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="personne" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.commons.ComFournisseurs" />
+        </set>
+        <set name="fltDdesInvsPerses" table="flt_ddes_invs_pers" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="personne" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltDdesInvsPers" />
+        </set>
+    </class>
+</hibernate-mapping>

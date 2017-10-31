@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.vente.VteFacturesLignes" table="vte_factures_lignes" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="fltMissions" class="com.horus.ankata.core.domain.flotte.FltMissions" fetch="select">
+            <column name="mission" />
+        </many-to-one>
+        <many-to-one name="vteFactures" class="com.horus.ankata.core.domain.vente.VteFactures" fetch="select">
+            <column name="facture" />
+        </many-to-one>
+        <property name="libelle" type="string">
+            <column name="libelle" length="200" />
+        </property>
+        <property name="montantHt" type="java.lang.Double">
+            <column name="montant_ht" precision="22" scale="0" />
+        </property>
+        <property name="pu" type="java.lang.Double">
+            <column name="pu" precision="22" scale="0" />
+        </property>
+        <property name="qte" type="java.lang.Double">
+            <column name="qte" precision="22" scale="0" />
+        </property>
+        <property name="refProd" type="string">
+            <column name="ref_prod" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.vente.VteBonsLivraisonsLignes" table="vte_bons_livraisons_lignes" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comProduits" class="com.horus.ankata.core.domain.commons.ComProduits" fetch="select">
+            <column name="produit" />
+        </many-to-one>
+        <many-to-one name="vteBonsLivraisons" class="com.horus.ankata.core.domain.vente.VteBonsLivraisons" fetch="select">
+            <column name="bon" />
+        </many-to-one>
+        <property name="libelle" type="string">
+            <column name="libelle" length="200" />
+        </property>
+        <property name="qte" type="java.lang.Integer">
+            <column name="qte" />
+        </property>
+        <property name="qteLivre" type="java.lang.Integer">
+            <column name="qte_livre" />
+        </property>
+        <property name="unite" type="string">
+            <column name="unite" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

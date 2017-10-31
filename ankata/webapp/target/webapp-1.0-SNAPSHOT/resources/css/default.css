@@ -1,0 +1,123 @@
+body {
+    background-color: #ffffff;
+    font-size: 12px;
+    font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    color: #000000;  
+    margin: 10px;
+}
+
+h1 {
+    font-family: Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    border-bottom: 1px solid #AFAFAF; 
+    font-size:  16px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    color: #D20005;
+}
+
+a:link, a:visited {
+    color: #045491;
+    font-weight : bold;
+    text-decoration: none;
+}
+
+a:link:hover, a:visited:hover  {
+    color: #045491;
+    font-weight : bold;
+    text-decoration : underline;
+}
+/***************************Module des border************/
+.ui-layout-unit{
+    margin: 0;
+    padding:0;
+    border: none;	     
+}
+.ui-layout-north {
+    z-index:20 !important;
+    overflow:visible !important;
+    /*background-color: #205081 !important;   */   
+
+    margin: 0;
+    padding:0;
+    height: 60px !important;
+    border-radius: 0px;
+
+}
+.ui-layout-north .ui-layout-unit-content {
+    overflow:visible !important;
+    border:none;
+    margin: 0;
+    padding:0;
+
+}
+.ui-layout-west {
+    overflow-x:hidden !important;
+    border:none;                    
+    margin: 0;
+    padding:0;
+    top:60px !important;
+    width: 305px !important;
+    border-radius: 0px;        
+
+
+}
+.ui-layout-west .ui-layout-unit-content {
+    margin: 0px 0 0 10px;
+    padding:0;
+    overflow-x:hidden !important;
+    background: #ABD589 !important;
+    border: 1px solid green  !important;
+    color: #000000;
+}
+.ui-layout-center {                
+    /*overflow:visible !important;*/
+    overflow-x:hidden !important;
+    margin: 0;
+    padding:0;
+    border-radius: 0px; 
+    top: 60px !important;
+    left: 305px !important;                    
+
+}
+.ui-layout-center .ui-layout-unit-content {
+    overflow:visible !important;border:none;
+    margin: 0;
+    padding:0;
+
+}
+.ui-layout-south {
+    margin: 0;
+    padding:0;
+    height: 20px !important;
+
+}
+.ui-layout-south .ui-layout-unit-content {
+    overflow:visible !important;
+    border:none;
+    margin: 0;
+    padding:0;
+
+}
+.ui-layout-resizer, .ui-layout-resizer-north, .ui-layout-resizer-open, .ui-layout-resizer-north-open
+{ 
+    height:0px !important; 
+}
+
+.ui-layout-center-login {                
+    /*overflow:visible !important;*/
+    overflow-x:hidden !important;
+    margin: 0;
+    padding:0;
+    border-radius: 0px; 
+    top: 0px !important;
+    left: 0px !important;                    
+
+}
+.ui-layout-center-login .ui-layout-unit-content {
+    overflow:visible !important;
+    border:none;
+    margin: 0;
+    padding:0;
+   /** background-image: url(../images/bg.jpg);**/
+}

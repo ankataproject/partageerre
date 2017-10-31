@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.commons.ComUsers" table="com_users" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comPersonnes" class="com.horus.ankata.core.domain.commons.ComPersonnes" fetch="select">
+            <column name="personne" />
+        </many-to-one>
+        <property name="changeMdp" type="string">
+            <column name="change_mdp" length="2" />
+        </property>
+        <property name="dc" type="timestamp">
+            <column name="dc" length="19" />
+        </property>
+        <property name="du" type="timestamp">
+            <column name="du" length="19" />
+        </property>
+        <property name="enable" type="string">
+            <column name="enable" length="2" />
+        </property>
+        <property name="login" type="string">
+            <column name="login" length="20" />
+        </property>
+        <property name="mail" type="string">
+            <column name="mail" length="50" />
+        </property>
+        <property name="mdp" type="string">
+            <column name="mdp" length="50" />
+        </property>
+        <property name="nom" type="string">
+            <column name="nom" length="250" />
+        </property>
+        <property name="prenom" type="string">
+            <column name="prenom" length="250" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="20" />
+        </property>
+        <property name="structure" type="string">
+            <column name="structure" length="20" />
+        </property>
+        <property name="tel" type="string">
+            <column name="tel" length="20" />
+        </property>
+        <property name="ucid" type="java.lang.Long">
+            <column name="ucid" />
+        </property>
+        <property name="uuid" type="java.lang.Long">
+            <column name="uuid" />
+        </property>
+        <set name="comProfilsUserses" table="com_profils_users" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user" not-null="true" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.commons.ComProfilsUsers" />
+        </set>
+        <set name="comPisteAudits" table="com_piste_audit" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.commons.ComPisteAudit" />
+        </set>
+    </class>
+</hibernate-mapping>

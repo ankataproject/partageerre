@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.commons.ComPays" table="com_pays" catalog="ankata_db" optimistic-lock="version">
+        <id name="code" type="string">
+            <column name="code" length="3" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="comMonnaies" class="com.horus.ankata.core.domain.commons.ComMonnaies" fetch="select">
+            <column name="monnaie" length="5" />
+        </many-to-one>
+        <property name="devise" type="string">
+            <column name="devise" />
+        </property>
+        <property name="nationnalite" type="string">
+            <column name="nationnalite" length="50" />
+        </property>
+        <property name="nom" type="string">
+            <column name="nom" length="20" />
+        </property>
+        <set name="comLocaliteses" table="com_localites" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="pays" length="3" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.commons.ComLocalites" />
+        </set>
+        <set name="comPersonneses" table="com_personnes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="pays_naissance" length="3" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.commons.ComPersonnes" />
+        </set>
+        <set name="comStructureses" table="com_structures" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="pays" length="3" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.commons.ComStructures" />
+        </set>
+    </class>
+</hibernate-mapping>

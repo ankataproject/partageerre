@@ -1,0 +1,11 @@
+# To change this license header, choose License Headers in Project Properties.
+# To change this template file, choose Tools | Templates
+# and open the template in the editor.
+
+########################################################
+# Connextion base de donn\u00e9e 
+########################################################
+jdbc.connection.driver=com.mysql.jdbc.Driver
+jdbc.connection.url=jdbc:mysql://localhost:3306/ankata_db
+jdbc.connection.username=dev    
+jdbc.connection.password=dev

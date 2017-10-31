@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ahorus:war">
+    <output-path>$PROJECT_DIR$/ahorus/target</output-path>
+    <root id="archive" name="ahorus-1.0-SNAPSHOT.war" />
+  </artifact>
+</component>

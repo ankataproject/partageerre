@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.stock.StkArticlesFamilles" table="stk_articles_familles" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nom" type="string">
+            <column name="nom" length="200" />
+        </property>
+        <set name="stkArticlesFamillesChampses" table="stk_articles_familles_champs" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="famille" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.stock.StkArticlesFamillesChamps" />
+        </set>
+        <set name="stkArticleses" table="stk_articles" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="famille" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.stock.StkArticles" />
+        </set>
+    </class>
+</hibernate-mapping>

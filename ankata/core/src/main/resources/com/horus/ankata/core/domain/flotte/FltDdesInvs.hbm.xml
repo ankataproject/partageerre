@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.flotte.FltDdesInvs" table="flt_ddes_invs" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="fltDdesInvsGravites" class="com.horus.ankata.core.domain.flotte.FltDdesInvsGravites" fetch="select">
+            <column name="grative" length="5" />
+        </many-to-one>
+        <many-to-one name="fltDdesInvsLieux" class="com.horus.ankata.core.domain.flotte.FltDdesInvsLieux" fetch="select">
+            <column name="lieu" length="5" />
+        </many-to-one>
+        <many-to-one name="fltDdesInvsNatures" class="com.horus.ankata.core.domain.flotte.FltDdesInvsNatures" fetch="select">
+            <column name="nature" length="5" />
+        </many-to-one>
+        <many-to-one name="fltDdesInvsPriorites" class="com.horus.ankata.core.domain.flotte.FltDdesInvsPriorites" fetch="select">
+            <column name="priorite" />
+        </many-to-one>
+        <many-to-one name="fltDdesInvsTypes" class="com.horus.ankata.core.domain.flotte.FltDdesInvsTypes" fetch="select">
+            <column name="type_dde" />
+        </many-to-one>
+        <many-to-one name="fltVehicules" class="com.horus.ankata.core.domain.flotte.FltVehicules" fetch="select">
+            <column name="vehicule" />
+        </many-to-one>
+        <property name="dateDde" type="date">
+            <column name="date_dde" length="10" />
+        </property>
+        <property name="dateDebut" type="timestamp">
+            <column name="date_debut" length="19" not-null="true" />
+        </property>
+        <property name="dateFin" type="date">
+            <column name="date_fin" length="10" />
+        </property>
+        <property name="datePrevue" type="date">
+            <column name="date_prevue" length="10" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="etat" type="java.lang.Integer">
+            <column name="etat" />
+        </property>
+        <property name="km" type="java.lang.Integer">
+            <column name="km" />
+        </property>
+        <property name="mtMoHt" type="java.lang.Double">
+            <column name="mt_mo_ht" precision="22" scale="0" />
+        </property>
+        <property name="mtPieceHt" type="java.lang.Double">
+            <column name="mt_piece_ht" precision="22" scale="0" />
+        </property>
+        <property name="mtTotalHt" type="java.lang.Double">
+            <column name="mt_total_ht" precision="22" scale="0" />
+        </property>
+        <set name="fltDdesInvsPieceses" table="flt_ddes_invs_pieces" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="demande" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltDdesInvsPieces" />
+        </set>
+        <set name="fltDdesInvsPerses" table="flt_ddes_invs_pers" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="demande" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltDdesInvsPers" />
+        </set>
+    </class>
+</hibernate-mapping>

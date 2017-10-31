@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.flotte.FltDdesInvsPieces" table="flt_ddes_invs_pieces" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="fltDdesInvs" class="com.horus.ankata.core.domain.flotte.FltDdesInvs" fetch="select">
+            <column name="demande" />
+        </many-to-one>
+        <many-to-one name="stkArticles" class="com.horus.ankata.core.domain.stock.StkArticles" fetch="select">
+            <column name="piece" />
+        </many-to-one>
+        <many-to-one name="stkBonsSorties" class="com.horus.ankata.core.domain.stock.StkBonsSorties" fetch="select">
+            <column name="bon_sortie" />
+        </many-to-one>
+        <property name="designation" type="string">
+            <column name="designation" length="200" />
+        </property>
+        <property name="montantHt" type="java.lang.Double">
+            <column name="montant_ht" precision="22" scale="0" />
+        </property>
+        <property name="montantTtc" type="java.lang.Double">
+            <column name="montant_ttc" precision="22" scale="0" />
+        </property>
+        <property name="pu" type="java.lang.Double">
+            <column name="pu" precision="22" scale="0" />
+        </property>
+        <property name="qte" type="java.lang.Double">
+            <column name="qte" precision="22" scale="0" />
+        </property>
+        <property name="tva" type="java.lang.Double">
+            <column name="tva" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

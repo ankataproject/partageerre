@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.stock.StkStocksSorties" table="stk_stocks_sorties" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comClients" class="com.horus.ankata.core.domain.commons.ComClients" fetch="select">
+            <column name="client" />
+        </many-to-one>
+        <many-to-one name="stkStocks" class="com.horus.ankata.core.domain.stock.StkStocks" fetch="select">
+            <column name="stock" />
+        </many-to-one>
+        <property name="article" type="string">
+            <column name="article" length="500" />
+        </property>
+        <property name="dateSortie" type="date">
+            <column name="date_sortie" length="10" />
+        </property>
+        <property name="emporterPar" type="string">
+            <column name="emporter_par" length="200" />
+        </property>
+        <property name="puv" type="java.lang.Double">
+            <column name="puv" precision="22" scale="0" />
+        </property>
+        <property name="qteSortie" type="java.lang.Double">
+            <column name="qte_sortie" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

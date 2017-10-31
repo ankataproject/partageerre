@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.commons.ComClients" table="com_clients" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comPersonnes" class="com.horus.ankata.core.domain.commons.ComPersonnes" fetch="select">
+            <column name="personne" />
+        </many-to-one>
+        <set name="vteDevises" table="vte_devis" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="client" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.vente.VteDevis" />
+        </set>
+        <set name="vteFactureses" table="vte_factures" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="client" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.vente.VteFactures" />
+        </set>
+        <set name="fltReservations" table="flt_reservation" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="clients" not-null="true" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltReservation" />
+        </set>
+        <set name="stkStocksSortieses" table="stk_stocks_sorties" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="client" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.stock.StkStocksSorties" />
+        </set>
+        <set name="fltMissionses" table="flt_missions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="client" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltMissions" />
+        </set>
+    </class>
+</hibernate-mapping>

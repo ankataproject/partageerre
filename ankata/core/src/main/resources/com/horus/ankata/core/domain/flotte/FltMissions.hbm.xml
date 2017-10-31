@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.flotte.FltMissions" table="flt_missions" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comClients" class="com.horus.ankata.core.domain.commons.ComClients" fetch="select">
+            <column name="client" />
+        </many-to-one>
+        <many-to-one name="fltActivites" class="com.horus.ankata.core.domain.flotte.FltActivites" fetch="select">
+            <column name="activite" />
+        </many-to-one>
+        <many-to-one name="fltRemorques" class="com.horus.ankata.core.domain.flotte.FltRemorques" fetch="select">
+            <column name="remorque" />
+        </many-to-one>
+        <many-to-one name="fltTrajets" class="com.horus.ankata.core.domain.flotte.FltTrajets" fetch="select">
+            <column name="trajet" />
+        </many-to-one>
+        <many-to-one name="fltVehicules" class="com.horus.ankata.core.domain.flotte.FltVehicules" fetch="select">
+            <column name="vehicule" />
+        </many-to-one>
+        <property name="conducteur" type="string">
+            <column name="conducteur" length="200" />
+        </property>
+        <property name="dateCloture" type="date">
+            <column name="date_cloture" length="10" />
+        </property>
+        <property name="dateDeb" type="timestamp">
+            <column name="date_deb" length="19" />
+        </property>
+        <property name="dateDebCharg" type="timestamp">
+            <column name="date_deb_charg" length="19" />
+        </property>
+        <property name="dateDebDecharg" type="timestamp">
+            <column name="date_deb_decharg" length="19" />
+        </property>
+        <property name="dateFinCharg" type="timestamp">
+            <column name="date_fin_charg" length="19" />
+        </property>
+        <property name="dateFinDecharg" type="timestamp">
+            <column name="date_fin_decharg" length="19" />
+        </property>
+        <property name="datePrevueFin" type="timestamp">
+            <column name="date_prevue_fin" length="19" />
+        </property>
+        <property name="dateReelFin" type="timestamp">
+            <column name="date_reel_fin" length="19" />
+        </property>
+        <property name="dateUtilsa" type="date">
+            <column name="date_utilsa" length="10" />
+        </property>
+        <property name="etat" type="string">
+            <column name="etat" length="2" />
+        </property>
+        <property name="kiloDepart" type="java.lang.Double">
+            <column name="kilo_depart" precision="22" scale="0" />
+        </property>
+        <property name="kiloRetour" type="java.lang.Double">
+            <column name="kilo_retour" precision="22" scale="0" />
+        </property>
+        <property name="nature" type="string">
+            <column name="nature" length="1" />
+        </property>
+        <property name="nivCarbDep" type="java.lang.Double">
+            <column name="niv_carb_dep" precision="22" scale="0" />
+        </property>
+        <property name="nivCarbRet" type="java.lang.Double">
+            <column name="niv_carb_ret" precision="22" scale="0" />
+        </property>
+        <property name="numOrdre" type="string">
+            <column name="num_ordre" length="20" />
+        </property>
+        <property name="refAller" type="string">
+            <column name="ref_aller" length="45" />
+        </property>
+        <property name="remisBord" type="string">
+            <column name="remis_bord" length="200" />
+        </property>
+        <property name="travaux" type="string">
+            <column name="travaux" />
+        </property>
+        <property name="typeTrajet" type="string">
+            <column name="type_trajet" length="2" />
+        </property>
+        <set name="fltMissionsChargeses" table="flt_missions_charges" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mission" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltMissionsCharges" />
+        </set>
+        <set name="fltMissionsConducteurses" table="flt_missions_conducteurs" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mission" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltMissionsConducteurs" />
+        </set>
+        <set name="fltMissionsEntretienses" table="flt_missions_entretiens" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mission" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltMissionsEntretiens" />
+        </set>
+        <set name="vteBonsLivraisonses" table="vte_bons_livraisons" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mission" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.vente.VteBonsLivraisons" />
+        </set>
+        <set name="fltMissionsSinistreses" table="flt_missions_sinistres" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mission" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltMissionsSinistres" />
+        </set>
+        <set name="vteFacturesLigneses" table="vte_factures_lignes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mission" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.vente.VteFacturesLignes" />
+        </set>
+        <set name="fltMissionsCarburantses" table="flt_missions_carburants" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mission" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltMissionsCarburants" />
+        </set>
+        <set name="fltMissionsInfractionses" table="flt_missions_infractions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="mission" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltMissionsInfractions" />
+        </set>
+    </class>
+</hibernate-mapping>

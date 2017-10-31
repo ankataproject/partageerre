@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.flotte.FltDdesInvsPers" table="flt_ddes_invs_pers" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comPersonnes" class="com.horus.ankata.core.domain.commons.ComPersonnes" fetch="select">
+            <column name="personne" />
+        </many-to-one>
+        <many-to-one name="fltDdesInvs" class="com.horus.ankata.core.domain.flotte.FltDdesInvs" fetch="select">
+            <column name="demande" />
+        </many-to-one>
+        <property name="coutMo" type="java.lang.Double">
+            <column name="cout_mo" precision="22" scale="0" />
+        </property>
+        <property name="dateDebut" type="date">
+            <column name="date_debut" length="10" />
+        </property>
+        <property name="dateFin" type="date">
+            <column name="date_fin" length="10" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="nbHeure" type="java.lang.Integer">
+            <column name="nb_heure" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.achat.AchBonsDecaissements" table="ach_bons_decaissements" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comBanques" class="com.horus.ankata.core.domain.commons.ComBanques" fetch="select">
+            <column name="banque" />
+        </many-to-one>
+        <many-to-one name="comCaisses" class="com.horus.ankata.core.domain.commons.ComCaisses" fetch="select">
+            <column name="caisse" />
+        </many-to-one>
+        <many-to-one name="comTypesPayements" class="com.horus.ankata.core.domain.commons.ComTypesPayements" fetch="select">
+            <column name="mode_paiement" length="5" />
+        </many-to-one>
+        <property name="dateDecaissement" type="date">
+            <column name="date_decaissement" length="10" />
+        </property>
+        <property name="datePaiement" type="date">
+            <column name="date_paiement" length="10" />
+        </property>
+        <property name="etat" type="java.lang.Byte">
+            <column name="etat" />
+        </property>
+        <property name="facture" type="java.lang.Long">
+            <column name="facture" />
+        </property>
+        <property name="montantTtc" type="java.lang.Double">
+            <column name="montant_ttc" precision="22" scale="0" />
+        </property>
+        <property name="numBon" type="string">
+            <column name="num_bon" length="45" />
+        </property>
+        <property name="numCheque" type="string">
+            <column name="num_cheque" length="45" />
+        </property>
+        <property name="origine" type="string">
+            <column name="origine" length="3" />
+        </property>
+        <property name="refDoc" type="string">
+            <column name="ref_doc" length="45" />
+        </property>
+        <property name="responsable" type="string">
+            <column name="responsable" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

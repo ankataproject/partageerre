@@ -1,0 +1,65 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+
+    <div class="login-page">
+
+
+        <div class="row">
+            <div class="col-lg-12">
+
+            </div>
+        </div>
+        <div class="formlogin">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="img-lef">
+                      
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="fomulaire-login">
+                         <p:outputPanel styleClass="ui-login-msg">
+                        <p:messages id="messagesl" autoUpdate="true" closable="true"/>
+                    </p:outputPanel>
+                        <p:outputPanel styleClass="ui-login ui-custom-corner-all">
+                            <p:outputPanel styleClass="form">
+                                <h:form id="login-admin">
+                                    <div class="form-group">
+                                    <h:outputText value="#{msg['label.societe']}" styleClass="label"/>
+                                    <p:spacer width="5"/>
+                                    <p:inputText id="societe" value="#{loginBeans.structure}" validator="#{loginBeans.putStructure}"
+                                                 required="true" label="#{msg['label.societe']}" size="35"/>
+
+                                </div>
+                                    <div class="form-group">
+                                    <h:outputText value="#{msg['label.login']}" styleClass="label"/>
+                                    <p:spacer width="5"/>
+                                    <p:inputText id="login" value="#{loginBeans.login}" validator="#{loginBeans.putLogin}"
+                                                 required="true" label="#{msg['label.identifiant']}" size="35"/>
+                                </div>
+                                    <div class="form-group">
+                                      <h:outputText value="#{msg['label.mot.de.passe']}" styleClass="label"/>
+                                    <p:spacer width="5"/>
+                                    <p:password id="password" value="#{loginBeans.mdp}" validator="#{loginBeans.validateMdp}"
+                                                 required="true" label="#{msg['label.mot.de.passe']}" size="35"/>
+
+                                </div>
+                                     <p:commandButton action="#{loginBean.action()}" 
+                                                 value="#{msg['label.login.se.connecter']}"
+                                                 styleClass="bouton">
+                                    <f:setPropertyActionListener value="connexion" target="#{loginBean.action}"/>
+                                </p:commandButton>
+                                </h:form>
+                            </p:outputPanel>
+                        </p:outputPanel>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</ui:composition>

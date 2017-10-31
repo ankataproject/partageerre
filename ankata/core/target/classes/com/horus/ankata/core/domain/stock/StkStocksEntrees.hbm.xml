@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.stock.StkStocksEntrees" table="stk_stocks_entrees" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comFournisseurs" class="com.horus.ankata.core.domain.commons.ComFournisseurs" fetch="select">
+            <column name="fournisseur" />
+        </many-to-one>
+        <many-to-one name="stkStocks" class="com.horus.ankata.core.domain.stock.StkStocks" fetch="select">
+            <column name="stock" />
+        </many-to-one>
+        <property name="article" type="string">
+            <column name="article" />
+        </property>
+        <property name="dateEntree" type="date">
+            <column name="date_entree" length="10" />
+        </property>
+        <property name="pua" type="java.lang.Double">
+            <column name="pua" precision="22" scale="0" />
+        </property>
+        <property name="qteEntree" type="java.lang.Double">
+            <column name="qte_entree" precision="22" scale="0" />
+        </property>
+        <property name="receptionnePar" type="string">
+            <column name="receptionne_par" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

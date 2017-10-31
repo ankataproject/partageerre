@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.flotte.FltTrajets" table="flt_trajets" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comLocalitesByDepart" class="com.horus.ankata.core.domain.commons.ComLocalites" fetch="select">
+            <column name="depart" length="5" />
+        </many-to-one>
+        <many-to-one name="comLocalitesByArrive" class="com.horus.ankata.core.domain.commons.ComLocalites" fetch="select">
+            <column name="arrive" length="5" />
+        </many-to-one>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="distance" type="java.lang.Double">
+            <column name="distance" precision="22" scale="0" />
+        </property>
+        <property name="duree" type="java.lang.Double">
+            <column name="duree" precision="22" scale="0" />
+        </property>
+        <property name="libelle" type="string">
+            <column name="libelle" length="200" />
+        </property>
+        <set name="fltMissionses" table="flt_missions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="trajet" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltMissions" />
+        </set>
+        <set name="fltTrajetsDetailses" table="flt_trajets_details" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="trajet" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltTrajetsDetails" />
+        </set>
+    </class>
+</hibernate-mapping>

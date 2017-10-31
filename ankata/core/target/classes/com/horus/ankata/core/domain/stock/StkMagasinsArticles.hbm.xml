@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.stock.StkMagasinsArticles" table="stk_magasins_articles" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="stkArticles" class="com.horus.ankata.core.domain.stock.StkArticles" fetch="select">
+            <column name="article" />
+        </many-to-one>
+        <many-to-one name="stkMagasins" class="com.horus.ankata.core.domain.stock.StkMagasins" fetch="select">
+            <column name="magasin" />
+        </many-to-one>
+        <property name="pump" type="java.lang.Double">
+            <column name="pump" precision="22" scale="0" />
+        </property>
+        <property name="qteDispo" type="java.lang.Double">
+            <column name="qte_dispo" precision="22" scale="0" />
+        </property>
+        <property name="qteEntree" type="java.lang.Double">
+            <column name="qte_entree" precision="22" scale="0" />
+        </property>
+        <property name="qteReelle" type="java.lang.Double">
+            <column name="qte_reelle" precision="22" scale="0" />
+        </property>
+        <property name="qteSortie" type="java.lang.Double">
+            <column name="qte_sortie" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

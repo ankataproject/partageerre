@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.commons.ComPisteAudit" table="com_piste_audit" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comUsers" class="com.horus.ankata.core.domain.commons.ComUsers" fetch="select">
+            <column name="user" />
+        </many-to-one>
+        <property name="action" type="string">
+            <column name="action" length="50" />
+        </property>
+        <property name="date" type="timestamp">
+            <column name="date" length="19" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="fonctionnalite" type="string">
+            <column name="fonctionnalite" length="100" />
+        </property>
+        <property name="newdata" type="string">
+            <column name="newdata" />
+        </property>
+        <property name="olddata" type="string">
+            <column name="olddata" />
+        </property>
+    </class>
+</hibernate-mapping>

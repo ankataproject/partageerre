@@ -1,0 +1,102 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.horus.ankata.core.dao;
+
+import java.util.List;
+import org.hibernate.Query;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+/**
+ *
+ * @author babacar
+ */
+@Service("genDao")
+@Transactional
+public class GenDaoImp implements GenDao {
+
+    @Autowired
+    private SessionFactory sessionFactory;
+
+    @Override
+    public SessionFactory getsessionFactory() {
+        return sessionFactory;
+    }
+
+    @Override
+    public List<Object> findHqlAll(String model, String criteres) {
+        Query q = sessionFactory.getCurrentSession().createQuery("from " + model + " " + criteres);
+        return q.list();
+    }
+
+    @Override
+    public List findHql(String query) {
+        Query q = sessionFactory.getCurrentSession().createQuery(query);
+        return q.list();
+    }
+
+    @Override
+    public List findSql(String query) {
+        Query q = sessionFactory.getCurrentSession().createSQLQuery(query);
+        return q.list();
+    }
+
+    @Override
+    public Object findHqlUnique(String query) {
+        Query q = sessionFactory.getCurrentSession().createQuery(query);
+        return q.uniqueResult();
+    }
+
+    @Override
+    public Object findHqlUnique(String model, String where) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Object findHqlById(String model, Long id) {
+        Query q = sessionFactory.getCurrentSession().createQuery("from " + model + " where id = :id");
+        q.setLong("id", id);
+        return q.uniqueResult();
+    }
+
+    @Override
+    public Object findHqlByCode(String model, String code) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void save(Object o) {
+        sessionFactory.getCurrentSession().save(o);
+    }
+
+    @Override
+    public void update(Object o) {
+        sessionFactory.getCurrentSession().update(o);
+    }
+
+    @Override
+    public void delete(Object o) {
+        sessionFactory.getCurrentSession().delete(o);
+    }
+
+    @Override
+    public int deleteHql(String q) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int deleteSqlAll(String model, List<Long> liste) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int deleteHqlAll(String model, List<Long> liste) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+}

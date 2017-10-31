@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.flotte.FltReservation" table="flt_reservation" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="comClients" class="com.horus.ankata.core.domain.commons.ComClients" fetch="select">
+            <column name="clients" not-null="true" />
+        </many-to-one>
+        <many-to-one name="fltVehicules" class="com.horus.ankata.core.domain.flotte.FltVehicules" fetch="select">
+            <column name="vehicule" not-null="true" />
+        </many-to-one>
+        <property name="dateFin" type="date">
+            <column name="date_fin" length="10" />
+        </property>
+        <property name="datedebut" type="date">
+            <column name="datedebut" length="10" />
+        </property>
+        <property name="prix" type="java.lang.Double">
+            <column name="prix" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.commons.ComFournisseurs" table="com_fournisseurs" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comPersonnes" class="com.horus.ankata.core.domain.commons.ComPersonnes" fetch="select">
+            <column name="personne" />
+        </many-to-one>
+        <set name="achBonsLivraisonses" table="ach_bons_livraisons" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="founisseur" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.achat.AchBonsLivraisons" />
+        </set>
+        <set name="achDevises" table="ach_devis" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="founisseur" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.achat.AchDevis" />
+        </set>
+        <set name="stkStocksEntreeses" table="stk_stocks_entrees" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fournisseur" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.stock.StkStocksEntrees" />
+        </set>
+        <set name="fltMissionsCarburantses" table="flt_missions_carburants" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fournisseur" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltMissionsCarburants" />
+        </set>
+        <set name="fltMissionsEntretienses" table="flt_missions_entretiens" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="founisseur" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltMissionsEntretiens" />
+        </set>
+        <set name="achFactureses" table="ach_factures" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fournisseur" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.achat.AchFactures" />
+        </set>
+        <set name="fltMissionsChargeses" table="flt_missions_charges" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="founisseur" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltMissionsCharges" />
+        </set>
+        <set name="achBonsCommandeses" table="ach_bons_commandes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="founisseur" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.achat.AchBonsCommandes" />
+        </set>
+    </class>
+</hibernate-mapping>

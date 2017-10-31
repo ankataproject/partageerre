@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.commons.ComMenus" table="com_menus" catalog="ankata_db" optimistic-lock="version">
+        <id name="code" type="string">
+            <column name="code" length="5" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="comMenus" class="com.horus.ankata.core.domain.commons.ComMenus" fetch="select">
+            <column name="parent" length="5" />
+        </many-to-one>
+        <property name="enable" type="string">
+            <column name="enable" length="2" />
+        </property>
+        <property name="icon" type="string">
+            <column name="icon" length="100" />
+        </property>
+        <property name="libelle" type="string">
+            <column name="libelle" length="200" />
+        </property>
+        <property name="msgkey" type="string">
+            <column name="msgkey" length="200" />
+        </property>
+        <property name="ordre" type="java.lang.Integer">
+            <column name="ordre" />
+        </property>
+        <property name="page" type="string">
+            <column name="page" length="100" />
+        </property>
+        <property name="selected" type="java.lang.Boolean">
+            <column name="selected" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="2" />
+        </property>
+        <set name="comRoleses" table="com_roles" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="menus" length="5" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.commons.ComRoles" />
+        </set>
+        <set name="comMenuses" table="com_menus" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="parent" length="5" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.commons.ComMenus" />
+        </set>
+    </class>
+</hibernate-mapping>

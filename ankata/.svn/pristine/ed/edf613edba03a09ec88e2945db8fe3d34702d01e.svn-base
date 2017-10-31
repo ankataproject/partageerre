@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.flotte.FltVehicules" table="flt_vehicules" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="fltAcquisitions" class="com.horus.ankata.core.domain.flotte.FltAcquisitions" fetch="select">
+            <column name="acquisition" />
+        </many-to-one>
+        <many-to-one name="fltConducteurs" class="com.horus.ankata.core.domain.flotte.FltConducteurs" fetch="select">
+            <column name="conducteur" />
+        </many-to-one>
+        <many-to-one name="fltModeles" class="com.horus.ankata.core.domain.flotte.FltModeles" fetch="select">
+            <column name="modele" />
+        </many-to-one>
+        <many-to-one name="fltParcs" class="com.horus.ankata.core.domain.flotte.FltParcs" fetch="select">
+            <column name="parc" />
+        </many-to-one>
+        <many-to-one name="fltVehiculesStatuts" class="com.horus.ankata.core.domain.flotte.FltVehiculesStatuts" fetch="select">
+            <column name="statut_vehicule" />
+        </many-to-one>
+        <property name="ancNumImm" type="string">
+            <column name="anc_num_imm" length="50" />
+        </property>
+        <property name="annee" type="java.lang.Integer">
+            <column name="annee" />
+        </property>
+        <property name="boiteVit" type="java.lang.Integer">
+            <column name="boite_vit" />
+        </property>
+        <property name="code" type="string">
+            <column name="code" length="20" />
+        </property>
+        <property name="codeCle" type="string">
+            <column name="code_cle" length="20" />
+        </property>
+        <property name="consExUrb" type="java.lang.Double">
+            <column name="cons_ex_urb" precision="22" scale="0" />
+        </property>
+        <property name="consMix" type="java.lang.Double">
+            <column name="cons_mix" precision="22" scale="0" />
+        </property>
+        <property name="consUrb" type="java.lang.Double">
+            <column name="cons_urb" precision="22" scale="0" />
+        </property>
+        <property name="couleur" type="string">
+            <column name="couleur" length="20" />
+        </property>
+        <property name="cylindre" type="java.lang.Integer">
+            <column name="cylindre" />
+        </property>
+        <property name="dateEntreeParc" type="date">
+            <column name="date_entree_parc" length="10" />
+        </property>
+        <property name="dateMisCirc" type="date">
+            <column name="date_mis_circ" length="10" />
+        </property>
+        <property name="dateRestitution" type="date">
+            <column name="date_restitution" length="10" />
+        </property>
+        <property name="dimensions" type="string">
+            <column name="dimensions" length="20" />
+        </property>
+        <property name="emissCo2" type="java.lang.Double">
+            <column name="emiss_co2" precision="22" scale="0" />
+        </property>
+        <property name="energie" type="string">
+            <column name="energie" length="1" />
+        </property>
+        <property name="genre" type="string">
+            <column name="genre" length="20" />
+        </property>
+        <property name="icone" type="string">
+            <column name="icone" length="100" />
+        </property>
+        <property name="immatriculation" type="string">
+            <column name="immatriculation" length="50" />
+        </property>
+        <property name="nbrePorte" type="java.lang.Integer">
+            <column name="nbre_porte" />
+        </property>
+        <property name="numCarteGrise" type="string">
+            <column name="num_carte_grise" length="50" />
+        </property>
+        <property name="numChassis" type="string">
+            <column name="num_chassis" length="20" />
+        </property>
+        <property name="numImputation" type="string">
+            <column name="num_imputation" length="50" />
+        </property>
+        <property name="numOrdre" type="string">
+            <column name="num_ordre" length="20" />
+        </property>
+        <property name="prix" type="java.lang.Double">
+            <column name="prix" precision="22" scale="0" />
+        </property>
+        <property name="ptc" type="java.lang.Integer">
+            <column name="ptc" />
+        </property>
+        <property name="ptv" type="java.lang.Integer">
+            <column name="ptv" />
+        </property>
+        <property name="puisAdm" type="java.lang.Integer">
+            <column name="puis_adm" />
+        </property>
+        <property name="puisReel" type="java.lang.Integer">
+            <column name="puis_reel" />
+        </property>
+        <property name="vmax" type="java.lang.Double">
+            <column name="vmax" precision="22" scale="0" />
+        </property>
+        <property name="volCoffMax" type="java.lang.Integer">
+            <column name="vol_coff_max" />
+        </property>
+        <property name="volCoffMin" type="java.lang.Integer">
+            <column name="vol_coff_min" />
+        </property>
+        <set name="fltVehiculesAttachementses" table="flt_vehicules_attachements" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="vehicule" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltVehiculesAttachements" />
+        </set>
+        <set name="fltAssuranceses" table="flt_assurances" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="vehicule" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltAssurances" />
+        </set>
+        <set name="fltVisitesTechniqueses" table="flt_visites_techniques" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="vehicule" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltVisitesTechniques" />
+        </set>
+        <set name="stkBonsSortieses" table="stk_bons_sorties" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="vehicule" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.stock.StkBonsSorties" />
+        </set>
+        <set name="fltDdesInvses" table="flt_ddes_invs" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="vehicule" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltDdesInvs" />
+        </set>
+        <set name="stkBonsCommandesInterneses" table="stk_bons_commandes_internes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="vehicule" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.stock.StkBonsCommandesInternes" />
+        </set>
+        <set name="fltVehiculesPhotoses" table="flt_vehicules_photos" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="vehicule" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltVehiculesPhotos" />
+        </set>
+        <set name="fltMissionses" table="flt_missions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="vehicule" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltMissions" />
+        </set>
+        <set name="fltReservations" table="flt_reservation" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="vehicule" not-null="true" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltReservation" />
+        </set>
+        <set name="fltVignetteses" table="flt_vignettes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="vehicule" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltVignettes" />
+        </set>
+    </class>
+</hibernate-mapping>

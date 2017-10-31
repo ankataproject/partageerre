@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.flotte.FltConducteurs" table="flt_conducteurs" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comPersonnes" class="com.horus.ankata.core.domain.commons.ComPersonnes" fetch="select">
+            <column name="personne" />
+        </many-to-one>
+        <property name="datevalPermis" type="date">
+            <column name="dateval_permis" length="10" />
+        </property>
+        <property name="matricule" type="string">
+            <column name="matricule" length="250" />
+        </property>
+        <property name="numPermis" type="string">
+            <column name="num_permis" length="20" />
+        </property>
+        <property name="statut" type="string">
+            <column name="statut" length="2" />
+        </property>
+        <property name="typePermis" type="string">
+            <column name="type_permis" length="2" />
+        </property>
+        <set name="fltMissionsConducteurses" table="flt_missions_conducteurs" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="conducteur" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltMissionsConducteurs" />
+        </set>
+        <set name="fltVehiculeses" table="flt_vehicules" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="conducteur" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltVehicules" />
+        </set>
+    </class>
+</hibernate-mapping>

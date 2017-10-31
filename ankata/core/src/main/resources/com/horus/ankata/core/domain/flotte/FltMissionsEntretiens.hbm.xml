@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.flotte.FltMissionsEntretiens" table="flt_missions_entretiens" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comFournisseurs" class="com.horus.ankata.core.domain.commons.ComFournisseurs" fetch="select">
+            <column name="founisseur" />
+        </many-to-one>
+        <many-to-one name="fltMissions" class="com.horus.ankata.core.domain.flotte.FltMissions" fetch="select">
+            <column name="mission" />
+        </many-to-one>
+        <many-to-one name="fltTypesEntretiens" class="com.horus.ankata.core.domain.flotte.FltTypesEntretiens" fetch="select">
+            <column name="type_ent" />
+        </many-to-one>
+        <property name="dateEnt" type="date">
+            <column name="date_ent" length="10" />
+        </property>
+        <property name="garage" type="string">
+            <column name="garage" length="200" />
+        </property>
+        <property name="mecano" type="string">
+            <column name="mecano" length="200" />
+        </property>
+        <property name="montant" type="java.lang.Double">
+            <column name="montant" precision="22" scale="0" />
+        </property>
+        <property name="observation" type="string">
+            <column name="observation" />
+        </property>
+    </class>
+</hibernate-mapping>

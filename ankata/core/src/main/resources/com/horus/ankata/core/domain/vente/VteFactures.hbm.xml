@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.vente.VteFactures" table="vte_factures" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comClients" class="com.horus.ankata.core.domain.commons.ComClients" fetch="select">
+            <column name="client" />
+        </many-to-one>
+        <many-to-one name="comTypesPayements" class="com.horus.ankata.core.domain.commons.ComTypesPayements" fetch="select">
+            <column name="type_paiement" length="5" />
+        </many-to-one>
+        <property name="dateFac" type="date">
+            <column name="date_fac" length="10" />
+        </property>
+        <property name="montantHt" type="java.lang.Double">
+            <column name="montant_ht" precision="22" scale="0" />
+        </property>
+        <property name="montantTtc" type="java.lang.Double">
+            <column name="montant_ttc" precision="22" scale="0" />
+        </property>
+        <property name="montantTva" type="java.lang.Double">
+            <column name="montant_tva" precision="22" scale="0" />
+        </property>
+        <property name="numFac" type="string">
+            <column name="num_fac" length="45" />
+        </property>
+        <property name="paye" type="java.lang.Byte">
+            <column name="paye" />
+        </property>
+        <property name="tva" type="java.lang.Double">
+            <column name="tva" precision="22" scale="0" />
+        </property>
+        <set name="vteFacturesLigneses" table="vte_factures_lignes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="facture" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.vente.VteFacturesLignes" />
+        </set>
+        <set name="vteBonsEncaissementses" table="vte_bons_encaissements" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="facture" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.vente.VteBonsEncaissements" />
+        </set>
+    </class>
+</hibernate-mapping>

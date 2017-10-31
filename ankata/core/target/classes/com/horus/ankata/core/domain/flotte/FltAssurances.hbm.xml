@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.flotte.FltAssurances" table="flt_assurances" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="fltAssurancesComp" class="com.horus.ankata.core.domain.flotte.FltAssurancesComp" fetch="select">
+            <column name="compagnie" />
+        </many-to-one>
+        <many-to-one name="fltVehicules" class="com.horus.ankata.core.domain.flotte.FltVehicules" fetch="select">
+            <column name="vehicule" />
+        </many-to-one>
+        <property name="dateDeb" type="timestamp">
+            <column name="date_deb" length="19" />
+        </property>
+        <property name="dateFin" type="timestamp">
+            <column name="date_fin" length="19" />
+        </property>
+        <property name="numAttestation" type="string">
+            <column name="num_attestation" length="20" />
+        </property>
+        <property name="numPolice" type="string">
+            <column name="num_police" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

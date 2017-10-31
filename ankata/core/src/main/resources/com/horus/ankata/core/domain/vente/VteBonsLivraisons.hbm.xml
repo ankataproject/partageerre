@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.vente.VteBonsLivraisons" table="vte_bons_livraisons" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="fltMissions" class="com.horus.ankata.core.domain.flotte.FltMissions" fetch="select">
+            <column name="mission" />
+        </many-to-one>
+        <property name="dateAnnule" type="date">
+            <column name="date_annule" length="10" />
+        </property>
+        <property name="dateFacture" type="date">
+            <column name="date_facture" length="10" />
+        </property>
+        <property name="dateLivraison" type="date">
+            <column name="date_livraison" length="10" />
+        </property>
+        <property name="dateRelance" type="date">
+            <column name="date_relance" length="10" />
+        </property>
+        <property name="dateValide" type="date">
+            <column name="date_valide" length="10" />
+        </property>
+        <property name="dateValidite" type="date">
+            <column name="date_validite" length="10" />
+        </property>
+        <property name="etat" type="java.lang.Integer">
+            <column name="etat" />
+        </property>
+        <property name="exoTva" type="java.lang.Boolean">
+            <column name="exo_tva" />
+        </property>
+        <property name="gele" type="java.lang.Boolean">
+            <column name="gele" />
+        </property>
+        <property name="motif" type="string">
+            <column name="motif" length="300" />
+        </property>
+        <property name="motifAnnule" type="string">
+            <column name="motif_annule" length="200" />
+        </property>
+        <property name="numBon" type="string">
+            <column name="num_bon" length="20" />
+        </property>
+        <property name="numFacture" type="string">
+            <column name="num_facture" length="20" />
+        </property>
+        <property name="observation" type="string">
+            <column name="observation" length="500" />
+        </property>
+        <property name="solde" type="java.lang.Boolean">
+            <column name="solde" />
+        </property>
+        <property name="totHt" type="java.lang.Double">
+            <column name="tot_ht" precision="22" scale="0" />
+        </property>
+        <property name="totRabais" type="java.lang.Double">
+            <column name="tot_rabais" precision="22" scale="0" />
+        </property>
+        <property name="totReg" type="java.lang.Double">
+            <column name="tot_reg" precision="22" scale="0" />
+        </property>
+        <property name="totRemise" type="java.lang.Double">
+            <column name="tot_remise" precision="22" scale="0" />
+        </property>
+        <property name="totTtc" type="java.lang.Double">
+            <column name="tot_ttc" precision="22" scale="0" />
+        </property>
+        <property name="totTva" type="java.lang.Double">
+            <column name="tot_tva" precision="22" scale="0" />
+        </property>
+        <set name="vteBonsLivraisonsLigneses" table="vte_bons_livraisons_lignes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="bon" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.vente.VteBonsLivraisonsLignes" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.flotte.FltTrajetsDetails" table="flt_trajets_details" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="fltModeles" class="com.horus.ankata.core.domain.flotte.FltModeles" fetch="select">
+            <column name="model" />
+        </many-to-one>
+        <many-to-one name="fltTrajets" class="com.horus.ankata.core.domain.flotte.FltTrajets" fetch="select">
+            <column name="trajet" />
+        </many-to-one>
+        <property name="consommation" type="java.lang.Double">
+            <column name="consommation" precision="22" scale="0" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="fraisroute" type="java.lang.Double">
+            <column name="fraisroute" precision="22" scale="0" />
+        </property>
+        <property name="libelle" type="string">
+            <column name="libelle" length="200" />
+        </property>
+        <property name="prime" type="java.lang.Double">
+            <column name="prime" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

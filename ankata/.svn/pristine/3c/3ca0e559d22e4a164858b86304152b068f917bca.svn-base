@@ -1,0 +1,5024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="hibernate.cfg.xml/Hibernate">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="ankata_db">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="antaweb"/>
+    <schema id="4" parent="1" name="dblogin"/>
+    <schema id="5" parent="1" name="epgreport"/>
+    <schema id="6" parent="1" name="information_schema"/>
+    <schema id="7" parent="1" name="logimjhp"/>
+    <schema id="8" parent="1" name="loginflotte"/>
+    <schema id="9" parent="1" name="logintest"/>
+    <schema id="10" parent="1" name="memoire"/>
+    <schema id="11" parent="1" name="mysql"/>
+    <schema id="12" parent="1" name="performance_schema"/>
+    <schema id="13" parent="1" name="phpmyadmin"/>
+    <schema id="14" parent="1" name="sonar"/>
+    <schema id="15" parent="1" name="spang"/>
+    <schema id="16" parent="1" name="spring"/>
+    <schema id="17" parent="1" name="test"/>
+    <table id="18" parent="2" name="ach_bons_commandes"/>
+    <table id="19" parent="2" name="ach_bons_commandes_lignes"/>
+    <table id="20" parent="2" name="ach_bons_decaissements"/>
+    <table id="21" parent="2" name="ach_bons_livraisons"/>
+    <table id="22" parent="2" name="ach_bons_livraisons_lignes"/>
+    <table id="23" parent="2" name="ach_demandes"/>
+    <table id="24" parent="2" name="ach_demandes_lignes"/>
+    <table id="25" parent="2" name="ach_devis"/>
+    <table id="26" parent="2" name="ach_devis_lignes"/>
+    <table id="27" parent="2" name="ach_factures"/>
+    <table id="28" parent="2" name="ach_factures_lignes"/>
+    <table id="29" parent="2" name="com_banques"/>
+    <table id="30" parent="2" name="com_caisses"/>
+    <table id="31" parent="2" name="com_civilites"/>
+    <table id="32" parent="2" name="com_clients"/>
+    <table id="33" parent="2" name="com_emails"/>
+    <table id="34" parent="2" name="com_fonctions"/>
+    <table id="35" parent="2" name="com_fournisseurs"/>
+    <table id="36" parent="2" name="com_localites"/>
+    <table id="37" parent="2" name="com_menus"/>
+    <table id="38" parent="2" name="com_monnaies"/>
+    <table id="39" parent="2" name="com_natures_champs"/>
+    <table id="40" parent="2" name="com_parametres"/>
+    <table id="41" parent="2" name="com_pays"/>
+    <table id="42" parent="2" name="com_personnes"/>
+    <table id="43" parent="2" name="com_piste_audit"/>
+    <table id="44" parent="2" name="com_produits"/>
+    <table id="45" parent="2" name="com_produits_familles"/>
+    <table id="46" parent="2" name="com_profils"/>
+    <table id="47" parent="2" name="com_profils_users"/>
+    <table id="48" parent="2" name="com_roles"/>
+    <table id="49" parent="2" name="com_sit_fams"/>
+    <table id="50" parent="2" name="com_structures"/>
+    <table id="51" parent="2" name="com_types_champs"/>
+    <table id="52" parent="2" name="com_types_payements"/>
+    <table id="53" parent="2" name="com_unites"/>
+    <table id="54" parent="2" name="com_users"/>
+    <table id="55" parent="2" name="flt_acquisitions"/>
+    <table id="56" parent="2" name="flt_activites"/>
+    <table id="57" parent="2" name="flt_assurances"/>
+    <table id="58" parent="2" name="flt_assurances_comp"/>
+    <table id="59" parent="2" name="flt_categories"/>
+    <table id="60" parent="2" name="flt_conducteurs"/>
+    <table id="61" parent="2" name="flt_conducteurs_roles"/>
+    <table id="62" parent="2" name="flt_conforts"/>
+    <table id="63" parent="2" name="flt_ddes_invs"/>
+    <table id="64" parent="2" name="flt_ddes_invs_gravites"/>
+    <table id="65" parent="2" name="flt_ddes_invs_lieux"/>
+    <table id="66" parent="2" name="flt_ddes_invs_natures"/>
+    <table id="67" parent="2" name="flt_ddes_invs_pers"/>
+    <table id="68" parent="2" name="flt_ddes_invs_pieces"/>
+    <table id="69" parent="2" name="flt_ddes_invs_priorites"/>
+    <table id="70" parent="2" name="flt_ddes_invs_types"/>
+    <table id="71" parent="2" name="flt_marques"/>
+    <table id="72" parent="2" name="flt_missions"/>
+    <table id="73" parent="2" name="flt_missions_carburants"/>
+    <table id="74" parent="2" name="flt_missions_charges"/>
+    <table id="75" parent="2" name="flt_missions_conducteurs"/>
+    <table id="76" parent="2" name="flt_missions_entretiens"/>
+    <table id="77" parent="2" name="flt_missions_infractions"/>
+    <table id="78" parent="2" name="flt_missions_sinistres"/>
+    <table id="79" parent="2" name="flt_modeles"/>
+    <table id="80" parent="2" name="flt_parcs"/>
+    <table id="81" parent="2" name="flt_remorques"/>
+    <table id="82" parent="2" name="flt_reservation"/>
+    <table id="83" parent="2" name="flt_trajets"/>
+    <table id="84" parent="2" name="flt_trajets_details"/>
+    <table id="85" parent="2" name="flt_types_charges"/>
+    <table id="86" parent="2" name="flt_types_entretiens"/>
+    <table id="87" parent="2" name="flt_types_infractions"/>
+    <table id="88" parent="2" name="flt_vehicules"/>
+    <table id="89" parent="2" name="flt_vehicules_attachements"/>
+    <table id="90" parent="2" name="flt_vehicules_photos"/>
+    <table id="91" parent="2" name="flt_vehicules_statuts"/>
+    <table id="92" parent="2" name="flt_vignettes"/>
+    <table id="93" parent="2" name="flt_visites_techniques"/>
+    <table id="94" parent="2" name="stk_articles"/>
+    <table id="95" parent="2" name="stk_articles_champs"/>
+    <table id="96" parent="2" name="stk_articles_familles"/>
+    <table id="97" parent="2" name="stk_articles_familles_champs"/>
+    <table id="98" parent="2" name="stk_bons_commandes_internes"/>
+    <table id="99" parent="2" name="stk_bons_sorties"/>
+    <table id="100" parent="2" name="stk_bons_sorties_lignes"/>
+    <table id="101" parent="2" name="stk_inventaires"/>
+    <table id="102" parent="2" name="stk_inventaires_lignes"/>
+    <table id="103" parent="2" name="stk_magasins"/>
+    <table id="104" parent="2" name="stk_magasins_articles"/>
+    <table id="105" parent="2" name="stk_stocks"/>
+    <table id="106" parent="2" name="stk_stocks_entrees"/>
+    <table id="107" parent="2" name="stk_stocks_sorties"/>
+    <table id="108" parent="2" name="vte_bons_encaissements"/>
+    <table id="109" parent="2" name="vte_bons_livraisons"/>
+    <table id="110" parent="2" name="vte_bons_livraisons_lignes"/>
+    <table id="111" parent="2" name="vte_devis"/>
+    <table id="112" parent="2" name="vte_devis_lignes"/>
+    <table id="113" parent="2" name="vte_factures"/>
+    <table id="114" parent="2" name="vte_factures_lignes"/>
+    <column id="115" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="116" parent="18" name="date_bon">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="117" parent="18" name="date_liv_souhaite">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="118" parent="18" name="description">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="119" parent="18" name="etat">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="120" parent="18" name="montant_ht">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="121" parent="18" name="montant_ttc">
+      <Position>7</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="122" parent="18" name="montant_tva">
+      <Position>8</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="123" parent="18" name="num_bon">
+      <Position>9</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="124" parent="18" name="tva">
+      <Position>10</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="125" parent="18" name="devis">
+      <Position>11</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="126" parent="18" name="founisseur">
+      <Position>12</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="127" parent="18" name="FK2x0n6mul63yp7g69ip0wd22pt">
+      <ColNames>devis</ColNames>
+    </index>
+    <index id="128" parent="18" name="FKmvcddxwg4815sudf5xcrrjdsp">
+      <ColNames>founisseur</ColNames>
+    </index>
+    <key id="129" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="130" parent="18" name="FK2x0n6mul63yp7g69ip0wd22pt">
+      <ColNames>devis</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>ach_devis</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="131" parent="18" name="FKmvcddxwg4815sudf5xcrrjdsp">
+      <ColNames>founisseur</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_fournisseurs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="132" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="133" parent="19" name="designation">
+      <Position>2</Position>
+      <DataType>varchar(300)|0</DataType>
+    </column>
+    <column id="134" parent="19" name="moutant_ht">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="135" parent="19" name="pu">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="136" parent="19" name="qte">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="137" parent="19" name="bon">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="138" parent="19" name="unite">
+      <Position>7</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="139" parent="19" name="article">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="140" parent="19" name="FK308nqpx2q999kcfknijlcxvxw">
+      <ColNames>bon</ColNames>
+    </index>
+    <index id="141" parent="19" name="FK9p18bks6m6xl9egw8mdrm33h">
+      <ColNames>article</ColNames>
+    </index>
+    <index id="142" parent="19" name="FKk00wklg8g7ln310agto8o5uhv">
+      <ColNames>unite</ColNames>
+    </index>
+    <key id="143" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="144" parent="19" name="FK308nqpx2q999kcfknijlcxvxw">
+      <ColNames>bon</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>ach_bons_commandes</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="145" parent="19" name="FKk00wklg8g7ln310agto8o5uhv">
+      <ColNames>unite</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_unites</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="146" parent="19" name="FK9p18bks6m6xl9egw8mdrm33h">
+      <ColNames>article</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_articles</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="147" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="148" parent="20" name="date_decaissement">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="149" parent="20" name="date_paiement">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="150" parent="20" name="etat">
+      <Position>4</Position>
+      <DataType>tinyint(4)|0</DataType>
+    </column>
+    <column id="151" parent="20" name="facture">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="152" parent="20" name="montant_ttc">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="153" parent="20" name="num_bon">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="154" parent="20" name="num_cheque">
+      <Position>8</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="155" parent="20" name="origine">
+      <Position>9</Position>
+      <DataType>varchar(3)|0</DataType>
+    </column>
+    <column id="156" parent="20" name="ref_doc">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="157" parent="20" name="responsable">
+      <Position>11</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="158" parent="20" name="banque">
+      <Position>12</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="159" parent="20" name="caisse">
+      <Position>13</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="160" parent="20" name="mode_paiement">
+      <Position>14</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <index id="161" parent="20" name="FKagggnwqv8nh82fg5os0dhog3f">
+      <ColNames>caisse</ColNames>
+    </index>
+    <index id="162" parent="20" name="FKf4ujo0phl1vfldnlepqmk49u">
+      <ColNames>mode_paiement</ColNames>
+    </index>
+    <index id="163" parent="20" name="FKlidb99imhladr9gadi1gcnfj2">
+      <ColNames>banque</ColNames>
+    </index>
+    <key id="164" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="165" parent="20" name="FKlidb99imhladr9gadi1gcnfj2">
+      <ColNames>banque</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_banques</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="166" parent="20" name="FKagggnwqv8nh82fg5os0dhog3f">
+      <ColNames>caisse</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_caisses</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="167" parent="20" name="FKf4ujo0phl1vfldnlepqmk49u">
+      <ColNames>mode_paiement</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_types_payements</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <column id="168" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="169" parent="21" name="date_bon">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="170" parent="21" name="description">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="171" parent="21" name="etat">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="172" parent="21" name="montant_ht">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="173" parent="21" name="montant_ttc">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="174" parent="21" name="montant_tva">
+      <Position>7</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="175" parent="21" name="num_bon">
+      <Position>8</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="176" parent="21" name="ref_frs">
+      <Position>9</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="177" parent="21" name="tva">
+      <Position>10</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="178" parent="21" name="bon_commande">
+      <Position>11</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="179" parent="21" name="founisseur">
+      <Position>12</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="180" parent="21" name="magasin">
+      <Position>13</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="181" parent="21" name="FK2tc531f4wi6mq3f4m7owxxiwf">
+      <ColNames>founisseur</ColNames>
+    </index>
+    <index id="182" parent="21" name="FK84ewbcyger19anox7aq90oaf0">
+      <ColNames>magasin</ColNames>
+    </index>
+    <index id="183" parent="21" name="FK8sojrh2ceff9covb1xvqn05qq">
+      <ColNames>bon_commande</ColNames>
+    </index>
+    <key id="184" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="185" parent="21" name="FK8sojrh2ceff9covb1xvqn05qq">
+      <ColNames>bon_commande</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>ach_bons_commandes</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="186" parent="21" name="FK2tc531f4wi6mq3f4m7owxxiwf">
+      <ColNames>founisseur</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_fournisseurs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="187" parent="21" name="FK84ewbcyger19anox7aq90oaf0">
+      <ColNames>magasin</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_magasins</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="188" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="189" parent="22" name="designation">
+      <Position>2</Position>
+      <DataType>varchar(300)|0</DataType>
+    </column>
+    <column id="190" parent="22" name="moutant_ht">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="191" parent="22" name="pu">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="192" parent="22" name="qte">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="193" parent="22" name="bon">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="194" parent="22" name="unite">
+      <Position>7</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="195" parent="22" name="article">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="196" parent="22" name="FK6ab01bvotykq6091wa6y699c0">
+      <ColNames>article</ColNames>
+    </index>
+    <index id="197" parent="22" name="FKfain4ydbqhxb1xq3qqqdofe91">
+      <ColNames>bon</ColNames>
+    </index>
+    <index id="198" parent="22" name="FKoywvqau6vt2hrr9e4pxg290u9">
+      <ColNames>unite</ColNames>
+    </index>
+    <key id="199" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="200" parent="22" name="FKfain4ydbqhxb1xq3qqqdofe91">
+      <ColNames>bon</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>ach_bons_livraisons</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="201" parent="22" name="FKoywvqau6vt2hrr9e4pxg290u9">
+      <ColNames>unite</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_unites</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="202" parent="22" name="FK6ab01bvotykq6091wa6y699c0">
+      <ColNames>article</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_articles</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="203" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="204" parent="23" name="date_demande">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="205" parent="23" name="demandeur">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="206" parent="23" name="etat">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="207" parent="23" name="num_demande">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="208" parent="23" name="objet">
+      <Position>6</Position>
+      <DataType>varchar(300)|0</DataType>
+    </column>
+    <key id="209" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="210" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="211" parent="24" name="designation">
+      <Position>2</Position>
+      <DataType>varchar(300)|0</DataType>
+    </column>
+    <column id="212" parent="24" name="qte">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="213" parent="24" name="unite">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="214" parent="24" name="demande">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="215" parent="24" name="article">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="216" parent="24" name="FK1t95qvt901lxuxt2a6xjsrgaa">
+      <ColNames>article</ColNames>
+    </index>
+    <index id="217" parent="24" name="FK6yrxbiwk6ctcq1ppfqj3g2yii">
+      <ColNames>demande</ColNames>
+    </index>
+    <key id="218" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="219" parent="24" name="FK6yrxbiwk6ctcq1ppfqj3g2yii">
+      <ColNames>demande</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>ach_demandes</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="220" parent="24" name="FK1t95qvt901lxuxt2a6xjsrgaa">
+      <ColNames>article</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_articles</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="221" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="222" parent="25" name="date_devis">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="223" parent="25" name="description">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="224" parent="25" name="etat">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="225" parent="25" name="montant_ht">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="226" parent="25" name="montant_ttc">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="227" parent="25" name="montant_tva">
+      <Position>7</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="228" parent="25" name="num_devis">
+      <Position>8</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="229" parent="25" name="num_devis_frn">
+      <Position>9</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="230" parent="25" name="tva">
+      <Position>10</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="231" parent="25" name="demande">
+      <Position>11</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="232" parent="25" name="founisseur">
+      <Position>12</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="233" parent="25" name="FKrr7xpg2oejeanovdd1v6yblwf">
+      <ColNames>demande</ColNames>
+    </index>
+    <index id="234" parent="25" name="FKt3t218eds02eadgijirvumtek">
+      <ColNames>founisseur</ColNames>
+    </index>
+    <key id="235" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="236" parent="25" name="FKrr7xpg2oejeanovdd1v6yblwf">
+      <ColNames>demande</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>ach_demandes</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="237" parent="25" name="FKt3t218eds02eadgijirvumtek">
+      <ColNames>founisseur</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_fournisseurs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="238" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="239" parent="26" name="designation">
+      <Position>2</Position>
+      <DataType>varchar(300)|0</DataType>
+    </column>
+    <column id="240" parent="26" name="moutant_ht">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="241" parent="26" name="pu">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="242" parent="26" name="qte">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="243" parent="26" name="devis">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="244" parent="26" name="unite">
+      <Position>7</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="245" parent="26" name="article">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="246" parent="26" name="FK2cthie71lb1ned5lv8lo1n8q0">
+      <ColNames>unite</ColNames>
+    </index>
+    <index id="247" parent="26" name="FKdsk8w8r8tqt8e3hj5maoyrkl2">
+      <ColNames>devis</ColNames>
+    </index>
+    <index id="248" parent="26" name="FKepr5tiujqp6qgf6icmk82hlhm">
+      <ColNames>article</ColNames>
+    </index>
+    <key id="249" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="250" parent="26" name="FKdsk8w8r8tqt8e3hj5maoyrkl2">
+      <ColNames>devis</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>ach_devis</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="251" parent="26" name="FK2cthie71lb1ned5lv8lo1n8q0">
+      <ColNames>unite</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_unites</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="252" parent="26" name="FKepr5tiujqp6qgf6icmk82hlhm">
+      <ColNames>article</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_articles</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="253" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="254" parent="27" name="date_fac">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="255" parent="27" name="montant_ht">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="256" parent="27" name="montant_ttc">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="257" parent="27" name="montant_tva">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="258" parent="27" name="num_fac">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="259" parent="27" name="num_fac_frs">
+      <Position>7</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="260" parent="27" name="paye">
+      <Position>8</Position>
+      <DataType>tinyint(4)|0</DataType>
+    </column>
+    <column id="261" parent="27" name="tva">
+      <Position>9</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="262" parent="27" name="fournisseur">
+      <Position>10</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="263" parent="27" name="type_paiement">
+      <Position>11</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <index id="264" parent="27" name="FK1lbkeyfkv8i3is1x3g379ig8o">
+      <ColNames>fournisseur</ColNames>
+    </index>
+    <index id="265" parent="27" name="FK62ajtltwyn6c0ib2gj41p8ihm">
+      <ColNames>type_paiement</ColNames>
+    </index>
+    <key id="266" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="267" parent="27" name="FK1lbkeyfkv8i3is1x3g379ig8o">
+      <ColNames>fournisseur</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_fournisseurs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="268" parent="27" name="FK62ajtltwyn6c0ib2gj41p8ihm">
+      <ColNames>type_paiement</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_types_payements</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <column id="269" parent="28" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="270" parent="28" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="271" parent="28" name="montant_ht">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="272" parent="28" name="pu">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="273" parent="28" name="qte">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="274" parent="28" name="ref_prod">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="275" parent="28" name="facture">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="276" parent="28" name="article">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="277" parent="28" name="FK8hog59oljhefabpgdr8hrp6xi">
+      <ColNames>facture</ColNames>
+    </index>
+    <index id="278" parent="28" name="FKilx5q3ex94e44tqin3jcxstjm">
+      <ColNames>article</ColNames>
+    </index>
+    <key id="279" parent="28" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="280" parent="28" name="FK8hog59oljhefabpgdr8hrp6xi">
+      <ColNames>facture</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>ach_factures</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="281" parent="28" name="FKilx5q3ex94e44tqin3jcxstjm">
+      <ColNames>article</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_articles</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="282" parent="29" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="283" parent="29" name="code">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="284" parent="29" name="libelle">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <index id="285" parent="29" name="UKj6hmcd7oi8fagq1q9usby6spr">
+      <ColNames>code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="286" parent="29" name="UK_j6hmcd7oi8fagq1q9usby6spr">
+      <ColNames>code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="287" parent="29" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="288" parent="29" name="UK_j6hmcd7oi8fagq1q9usby6spr">
+      <ColNames>code</ColNames>
+      <UnderlyingIndexName>UK_j6hmcd7oi8fagq1q9usby6spr</UnderlyingIndexName>
+    </key>
+    <key id="289" parent="29" name="UKj6hmcd7oi8fagq1q9usby6spr">
+      <ColNames>code</ColNames>
+      <UnderlyingIndexName>UKj6hmcd7oi8fagq1q9usby6spr</UnderlyingIndexName>
+    </key>
+    <column id="290" parent="30" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="291" parent="30" name="code">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="292" parent="30" name="libelle">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <index id="293" parent="30" name="UK5wp17rfm98wdby2r6tivbp8jy">
+      <ColNames>code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="294" parent="30" name="UK_5wp17rfm98wdby2r6tivbp8jy">
+      <ColNames>code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="295" parent="30" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="296" parent="30" name="UK5wp17rfm98wdby2r6tivbp8jy">
+      <ColNames>code</ColNames>
+      <UnderlyingIndexName>UK5wp17rfm98wdby2r6tivbp8jy</UnderlyingIndexName>
+    </key>
+    <key id="297" parent="30" name="UK_5wp17rfm98wdby2r6tivbp8jy">
+      <ColNames>code</ColNames>
+      <UnderlyingIndexName>UK_5wp17rfm98wdby2r6tivbp8jy</UnderlyingIndexName>
+    </key>
+    <column id="298" parent="31" name="code">
+      <Position>1</Position>
+      <DataType>varchar(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="299" parent="31" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="300" parent="31" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="301" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="302" parent="32" name="personne">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="303" parent="32" name="FKaowog357v389vjkxgt6mbjx0w">
+      <ColNames>personne</ColNames>
+    </index>
+    <key id="304" parent="32" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="305" parent="32" name="FKaowog357v389vjkxgt6mbjx0w">
+      <ColNames>personne</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_personnes</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="306" parent="33" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="307" parent="33" name="date_envoi">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="308" parent="33" name="de">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="309" parent="33" name="errdesc">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="310" parent="33" name="etat">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="311" parent="33" name="fattach">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="312" parent="33" name="fname">
+      <Position>7</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="313" parent="33" name="message">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="314" parent="33" name="ref">
+      <Position>9</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="315" parent="33" name="sources">
+      <Position>10</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="316" parent="33" name="subject">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="317" parent="33" name="tocc">
+      <Position>12</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="318" parent="33" name="tocci">
+      <Position>13</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="319" parent="33" name="tod">
+      <Position>14</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="320" parent="33" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="321" parent="34" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="322" parent="34" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="323" parent="34" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="324" parent="35" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="325" parent="35" name="personne">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="326" parent="35" name="FK61v4o85b70w9s7s3plel0qg2m">
+      <ColNames>personne</ColNames>
+    </index>
+    <key id="327" parent="35" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="328" parent="35" name="FK61v4o85b70w9s7s3plel0qg2m">
+      <ColNames>personne</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_personnes</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="329" parent="36" name="code">
+      <Position>1</Position>
+      <DataType>varchar(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="330" parent="36" name="latitude">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="331" parent="36" name="longitude">
+      <Position>3</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="332" parent="36" name="nom">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="333" parent="36" name="pays">
+      <Position>5</Position>
+      <DataType>varchar(3)|0</DataType>
+    </column>
+    <index id="334" parent="36" name="FKpyle1hc5jgfim9oqshgba6r39">
+      <ColNames>pays</ColNames>
+    </index>
+    <key id="335" parent="36" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="336" parent="36" name="FKpyle1hc5jgfim9oqshgba6r39">
+      <ColNames>pays</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_pays</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <column id="337" parent="37" name="code">
+      <Position>1</Position>
+      <DataType>varchar(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="338" parent="37" name="enable">
+      <Position>2</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="339" parent="37" name="icon">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="340" parent="37" name="libelle">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="341" parent="37" name="msgkey">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="342" parent="37" name="ordre">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="343" parent="37" name="page">
+      <Position>7</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="344" parent="37" name="selected">
+      <Position>8</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="345" parent="37" name="type">
+      <Position>9</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="346" parent="37" name="parent">
+      <Position>10</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <index id="347" parent="37" name="FKqfmrjrmm0kcm5gxmoiqq1tb8s">
+      <ColNames>parent</ColNames>
+    </index>
+    <key id="348" parent="37" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="349" parent="37" name="FKqfmrjrmm0kcm5gxmoiqq1tb8s">
+      <ColNames>parent</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_menus</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <column id="350" parent="38" name="code">
+      <Position>1</Position>
+      <DataType>varchar(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="351" parent="38" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="352" parent="38" name="taux">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <key id="353" parent="38" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="354" parent="39" name="code">
+      <Position>1</Position>
+      <DataType>varchar(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="355" parent="39" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="356" parent="39" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="357" parent="40" name="code">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="358" parent="40" name="dc">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="359" parent="40" name="du">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="360" parent="40" name="format">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="361" parent="40" name="libelle">
+      <Position>5</Position>
+      <DataType>varchar(250)|0</DataType>
+    </column>
+    <column id="362" parent="40" name="type">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="363" parent="40" name="ucid">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="364" parent="40" name="uuid">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="365" parent="40" name="valeurs">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="366" parent="40" name="value">
+      <Position>10</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <key id="367" parent="40" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="368" parent="41" name="code">
+      <Position>1</Position>
+      <DataType>varchar(3)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="369" parent="41" name="devise">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="370" parent="41" name="nationnalite">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="371" parent="41" name="nom">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="372" parent="41" name="monnaie">
+      <Position>5</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <index id="373" parent="41" name="FK7wamdlph1cv5g1x0etx2h4pvt">
+      <ColNames>monnaie</ColNames>
+    </index>
+    <key id="374" parent="41" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="375" parent="41" name="FK7wamdlph1cv5g1x0etx2h4pvt">
+      <ColNames>monnaie</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_monnaies</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <column id="376" parent="42" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="377" parent="42" name="adr_adresse">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="378" parent="42" name="adr_bp">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="379" parent="42" name="adr_email">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="380" parent="42" name="adr_fax">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="381" parent="42" name="adr_tel1">
+      <Position>6</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="382" parent="42" name="adr_tel2">
+      <Position>7</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="383" parent="42" name="adr_ville">
+      <Position>8</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="384" parent="42" name="date_entree">
+      <Position>9</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="385" parent="42" name="date_naissance">
+      <Position>10</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="386" parent="42" name="dc">
+      <Position>11</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="387" parent="42" name="du">
+      <Position>12</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="388" parent="42" name="est_ne_vers">
+      <Position>13</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="389" parent="42" name="nationnalite">
+      <Position>14</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="390" parent="42" name="nature_pers">
+      <Position>15</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="391" parent="42" name="ne_vers">
+      <Position>16</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="392" parent="42" name="nom">
+      <Position>17</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="393" parent="42" name="nom_complet">
+      <Position>18</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="394" parent="42" name="nordre">
+      <Position>19</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="395" parent="42" name="photo">
+      <Position>20</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="396" parent="42" name="prenom">
+      <Position>21</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="397" parent="42" name="salaire">
+      <Position>22</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="398" parent="42" name="sexe">
+      <Position>23</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="399" parent="42" name="type_pers">
+      <Position>24</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="400" parent="42" name="ucid">
+      <Position>25</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="401" parent="42" name="uuid">
+      <Position>26</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="402" parent="42" name="ville_naissance">
+      <Position>27</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="403" parent="42" name="civilite">
+      <Position>28</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="404" parent="42" name="fonction">
+      <Position>29</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="405" parent="42" name="pays_naissance">
+      <Position>30</Position>
+      <DataType>varchar(3)|0</DataType>
+    </column>
+    <column id="406" parent="42" name="situation_familiale">
+      <Position>31</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="407" parent="42" name="structure">
+      <Position>32</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="408" parent="42" name="FK8ge6v1o4lwjcg5otmrm1ye3l0">
+      <ColNames>fonction</ColNames>
+    </index>
+    <index id="409" parent="42" name="FKbw76xbi5lpgr92eccwmror00j">
+      <ColNames>civilite</ColNames>
+    </index>
+    <index id="410" parent="42" name="FKixh7npfeuv4g3u7t6k0rxdlcg">
+      <ColNames>structure</ColNames>
+    </index>
+    <index id="411" parent="42" name="FKlcbdc9njjtl0dm77390pu9voy">
+      <ColNames>pays_naissance</ColNames>
+    </index>
+    <index id="412" parent="42" name="FKnqyqs5afpxrsmg9ebpej4r5l0">
+      <ColNames>situation_familiale</ColNames>
+    </index>
+    <key id="413" parent="42" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="414" parent="42" name="FKbw76xbi5lpgr92eccwmror00j">
+      <ColNames>civilite</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_civilites</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="415" parent="42" name="FK8ge6v1o4lwjcg5otmrm1ye3l0">
+      <ColNames>fonction</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_fonctions</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="416" parent="42" name="FKlcbdc9njjtl0dm77390pu9voy">
+      <ColNames>pays_naissance</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_pays</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="417" parent="42" name="FKnqyqs5afpxrsmg9ebpej4r5l0">
+      <ColNames>situation_familiale</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_sit_fams</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="418" parent="42" name="FKixh7npfeuv4g3u7t6k0rxdlcg">
+      <ColNames>structure</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_structures</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="419" parent="43" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="420" parent="43" name="action">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="421" parent="43" name="date">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="422" parent="43" name="description">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="423" parent="43" name="fonctionnalite">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="424" parent="43" name="newdata">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="425" parent="43" name="olddata">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="426" parent="43" name="user">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="427" parent="43" name="FK4fwqb3desnoqb9vi066vv99bw">
+      <ColNames>user</ColNames>
+    </index>
+    <key id="428" parent="43" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="429" parent="43" name="FK4fwqb3desnoqb9vi066vv99bw">
+      <ColNames>user</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_users</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="430" parent="44" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="431" parent="44" name="code">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="432" parent="44" name="famille">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="433" parent="44" name="nom">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="434" parent="44" name="tva">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="435" parent="44" name="unite">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <key id="436" parent="44" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="437" parent="45" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="438" parent="45" name="nom">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="439" parent="45" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="440" parent="46" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="441" parent="46" name="dc">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="442" parent="46" name="du">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="443" parent="46" name="est_admin">
+      <Position>4</Position>
+      <DataType>varchar(4)|0</DataType>
+    </column>
+    <column id="444" parent="46" name="etat">
+      <Position>5</Position>
+      <DataType>varchar(4)|0</DataType>
+    </column>
+    <column id="445" parent="46" name="libelle">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="446" parent="46" name="nature">
+      <Position>7</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="447" parent="46" name="ucid">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="448" parent="46" name="uuid">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <key id="449" parent="46" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="450" parent="47" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="451" parent="47" name="profil">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="452" parent="47" name="user">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="453" parent="47" name="FKb4usbofx1jicabsnoyc6blw90">
+      <ColNames>user</ColNames>
+    </index>
+    <index id="454" parent="47" name="FKfvv1qn13qcctnvje7gv3q8t78">
+      <ColNames>profil</ColNames>
+    </index>
+    <key id="455" parent="47" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="456" parent="47" name="FKfvv1qn13qcctnvje7gv3q8t78">
+      <ColNames>profil</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_profils</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="457" parent="47" name="FKb4usbofx1jicabsnoyc6blw90">
+      <ColNames>user</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_users</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="458" parent="48" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="459" parent="48" name="menus">
+      <Position>2</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="460" parent="48" name="profil">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="461" parent="48" name="FK80k3169xm6jxwmj7vskf43aqx">
+      <ColNames>profil</ColNames>
+    </index>
+    <index id="462" parent="48" name="FKbeys4nu8mwtwo8akrmuv8heaa">
+      <ColNames>menus</ColNames>
+    </index>
+    <key id="463" parent="48" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="464" parent="48" name="FKbeys4nu8mwtwo8akrmuv8heaa">
+      <ColNames>menus</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_menus</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="465" parent="48" name="FK80k3169xm6jxwmj7vskf43aqx">
+      <ColNames>profil</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_profils</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="466" parent="49" name="code">
+      <Position>1</Position>
+      <DataType>varchar(2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="467" parent="49" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="468" parent="49" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="469" parent="50" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="470" parent="50" name="code">
+      <Position>2</Position>
+      <DataType>varchar(250)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="471" parent="50" name="dc">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="472" parent="50" name="du">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="473" parent="50" name="etat">
+      <Position>5</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="474" parent="50" name="libelle">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="475" parent="50" name="niveau">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="476" parent="50" name="type_struc">
+      <Position>8</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="477" parent="50" name="ucid">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="478" parent="50" name="uuid">
+      <Position>10</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="479" parent="50" name="pays">
+      <Position>11</Position>
+      <DataType>varchar(3)|0</DataType>
+    </column>
+    <column id="480" parent="50" name="parent">
+      <Position>12</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="481" parent="50" name="FK849my9j476w9hy323b40m7ew5">
+      <ColNames>pays</ColNames>
+    </index>
+    <index id="482" parent="50" name="FKhvwih16m0qbrfxy4ew2c6ttbs">
+      <ColNames>parent</ColNames>
+    </index>
+    <key id="483" parent="50" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="484" parent="50" name="FK849my9j476w9hy323b40m7ew5">
+      <ColNames>pays</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_pays</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="485" parent="50" name="FKhvwih16m0qbrfxy4ew2c6ttbs">
+      <ColNames>parent</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_structures</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="486" parent="51" name="code">
+      <Position>1</Position>
+      <DataType>varchar(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="487" parent="51" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="488" parent="51" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="489" parent="52" name="code">
+      <Position>1</Position>
+      <DataType>varchar(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="490" parent="52" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="491" parent="52" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="492" parent="53" name="code">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="493" parent="53" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="494" parent="53" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="495" parent="54" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="496" parent="54" name="change_mdp">
+      <Position>2</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="497" parent="54" name="dc">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="498" parent="54" name="du">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="499" parent="54" name="enable">
+      <Position>5</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="500" parent="54" name="login">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="501" parent="54" name="mail">
+      <Position>7</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="502" parent="54" name="mdp">
+      <Position>8</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="503" parent="54" name="nom">
+      <Position>9</Position>
+      <DataType>varchar(250)|0</DataType>
+    </column>
+    <column id="504" parent="54" name="prenom">
+      <Position>10</Position>
+      <DataType>varchar(250)|0</DataType>
+    </column>
+    <column id="505" parent="54" name="status">
+      <Position>11</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="506" parent="54" name="structure">
+      <Position>12</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="507" parent="54" name="tel">
+      <Position>13</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="508" parent="54" name="ucid">
+      <Position>14</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="509" parent="54" name="uuid">
+      <Position>15</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="510" parent="54" name="personne">
+      <Position>16</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="511" parent="54" name="FK2en55q0od6i79c1pytl0jj0r9">
+      <ColNames>personne</ColNames>
+    </index>
+    <key id="512" parent="54" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="513" parent="54" name="FK2en55q0od6i79c1pytl0jj0r9">
+      <ColNames>personne</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_personnes</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="514" parent="55" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="515" parent="55" name="code">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="516" parent="55" name="libelle">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="517" parent="55" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="518" parent="56" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="519" parent="56" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(250)|0</DataType>
+    </column>
+    <key id="520" parent="56" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="521" parent="57" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="522" parent="57" name="date_deb">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="523" parent="57" name="date_fin">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="524" parent="57" name="num_attestation">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="525" parent="57" name="num_police">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="526" parent="57" name="compagnie">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="527" parent="57" name="vehicule">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="528" parent="57" name="FK2b0409r2y6xxwecq4jo15iai5">
+      <ColNames>vehicule</ColNames>
+    </index>
+    <index id="529" parent="57" name="FKj6mgks4d9l5bn0b5cneuhqc21">
+      <ColNames>compagnie</ColNames>
+    </index>
+    <key id="530" parent="57" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="531" parent="57" name="FKj6mgks4d9l5bn0b5cneuhqc21">
+      <ColNames>compagnie</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_assurances_comp</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="532" parent="57" name="FK2b0409r2y6xxwecq4jo15iai5">
+      <ColNames>vehicule</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_vehicules</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="533" parent="58" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="534" parent="58" name="contact_nom">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="535" parent="58" name="contact_tel">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="536" parent="58" name="personne">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="537" parent="58" name="FKgsdc7qtghxvek20uvctrdnytf">
+      <ColNames>personne</ColNames>
+    </index>
+    <key id="538" parent="58" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="539" parent="58" name="FKgsdc7qtghxvek20uvctrdnytf">
+      <ColNames>personne</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_personnes</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="540" parent="59" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="541" parent="59" name="code">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="542" parent="59" name="icone">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="543" parent="59" name="libelle">
+      <Position>4</Position>
+      <DataType>varchar(250)|0</DataType>
+    </column>
+    <column id="544" parent="59" name="statut">
+      <Position>5</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <key id="545" parent="59" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="546" parent="60" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="547" parent="60" name="dateval_permis">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="548" parent="60" name="matricule">
+      <Position>3</Position>
+      <DataType>varchar(250)|0</DataType>
+    </column>
+    <column id="549" parent="60" name="num_permis">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="550" parent="60" name="statut">
+      <Position>5</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="551" parent="60" name="type_permis">
+      <Position>6</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="552" parent="60" name="personne">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="553" parent="60" name="FK9lhye5t35sa9cgc97ix8ewttl">
+      <ColNames>personne</ColNames>
+    </index>
+    <key id="554" parent="60" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="555" parent="60" name="FK9lhye5t35sa9cgc97ix8ewttl">
+      <ColNames>personne</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_personnes</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="556" parent="61" name="code">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="557" parent="61" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <key id="558" parent="61" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="559" parent="62" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="560" parent="62" name="code">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="561" parent="62" name="libelle">
+      <Position>3</Position>
+      <DataType>varchar(250)|0</DataType>
+    </column>
+    <key id="562" parent="62" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="563" parent="63" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="564" parent="63" name="date_dde">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="565" parent="63" name="date_debut">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="566" parent="63" name="date_fin">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="567" parent="63" name="date_prevue">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="568" parent="63" name="description">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="569" parent="63" name="etat">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="570" parent="63" name="km">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="571" parent="63" name="mt_mo_ht">
+      <Position>9</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="572" parent="63" name="mt_piece_ht">
+      <Position>10</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="573" parent="63" name="mt_total_ht">
+      <Position>11</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="574" parent="63" name="grative">
+      <Position>12</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="575" parent="63" name="lieu">
+      <Position>13</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="576" parent="63" name="nature">
+      <Position>14</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="577" parent="63" name="priorite">
+      <Position>15</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="578" parent="63" name="type_dde">
+      <Position>16</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="579" parent="63" name="vehicule">
+      <Position>17</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="580" parent="63" name="FK6ylg8acwt29am61qkvcuvm7w">
+      <ColNames>type_dde</ColNames>
+    </index>
+    <index id="581" parent="63" name="FKhl7ccb9u98jw419ntlb12c887">
+      <ColNames>priorite</ColNames>
+    </index>
+    <index id="582" parent="63" name="FKldwk19dd2168lct2bhabpdfqc">
+      <ColNames>nature</ColNames>
+    </index>
+    <index id="583" parent="63" name="FKlnh1a404ukive4hsw6rgbejj1">
+      <ColNames>lieu</ColNames>
+    </index>
+    <index id="584" parent="63" name="FKo07i4m64whyyfsrd0vkd4jm3h">
+      <ColNames>vehicule</ColNames>
+    </index>
+    <index id="585" parent="63" name="FKt6losmtspcp452gdmerh6657c">
+      <ColNames>grative</ColNames>
+    </index>
+    <key id="586" parent="63" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="587" parent="63" name="FKt6losmtspcp452gdmerh6657c">
+      <ColNames>grative</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_ddes_invs_gravites</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="588" parent="63" name="FKlnh1a404ukive4hsw6rgbejj1">
+      <ColNames>lieu</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_ddes_invs_lieux</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="589" parent="63" name="FKldwk19dd2168lct2bhabpdfqc">
+      <ColNames>nature</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_ddes_invs_natures</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="590" parent="63" name="FKhl7ccb9u98jw419ntlb12c887">
+      <ColNames>priorite</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_ddes_invs_priorites</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="591" parent="63" name="FK6ylg8acwt29am61qkvcuvm7w">
+      <ColNames>type_dde</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_ddes_invs_types</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="592" parent="63" name="FKo07i4m64whyyfsrd0vkd4jm3h">
+      <ColNames>vehicule</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_vehicules</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="593" parent="64" name="code">
+      <Position>1</Position>
+      <DataType>varchar(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="594" parent="64" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="595" parent="64" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="596" parent="65" name="code">
+      <Position>1</Position>
+      <DataType>varchar(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="597" parent="65" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="598" parent="65" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="599" parent="66" name="code">
+      <Position>1</Position>
+      <DataType>varchar(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="600" parent="66" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="601" parent="66" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="602" parent="67" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="603" parent="67" name="cout_mo">
+      <Position>2</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="604" parent="67" name="date_debut">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="605" parent="67" name="date_fin">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="606" parent="67" name="description">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="607" parent="67" name="nb_heure">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="608" parent="67" name="personne">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="609" parent="67" name="demande">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="610" parent="67" name="FK9a6s67f03nbh4yo758aokdvf6">
+      <ColNames>personne</ColNames>
+    </index>
+    <index id="611" parent="67" name="FKnofyatxdgvqy5vj1qrgytrj4o">
+      <ColNames>demande</ColNames>
+    </index>
+    <key id="612" parent="67" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="613" parent="67" name="FK9a6s67f03nbh4yo758aokdvf6">
+      <ColNames>personne</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_personnes</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="614" parent="67" name="FKnofyatxdgvqy5vj1qrgytrj4o">
+      <ColNames>demande</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_ddes_invs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="615" parent="68" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="616" parent="68" name="designation">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="617" parent="68" name="montant_ht">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="618" parent="68" name="montant_ttc">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="619" parent="68" name="pu">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="620" parent="68" name="qte">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="621" parent="68" name="tva">
+      <Position>7</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="622" parent="68" name="demande">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="623" parent="68" name="piece">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="624" parent="68" name="bon_sortie">
+      <Position>10</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="625" parent="68" name="FK6s1lyr989ofj0dkwilwxevt27">
+      <ColNames>bon_sortie</ColNames>
+    </index>
+    <index id="626" parent="68" name="FKp7duyj1ha37yil21i0pjulcw8">
+      <ColNames>demande</ColNames>
+    </index>
+    <index id="627" parent="68" name="FKsnlpr1lde0c73p15pklftpmfb">
+      <ColNames>piece</ColNames>
+    </index>
+    <key id="628" parent="68" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="629" parent="68" name="FKp7duyj1ha37yil21i0pjulcw8">
+      <ColNames>demande</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_ddes_invs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="630" parent="68" name="FKsnlpr1lde0c73p15pklftpmfb">
+      <ColNames>piece</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_articles</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="631" parent="68" name="FK6s1lyr989ofj0dkwilwxevt27">
+      <ColNames>bon_sortie</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_bons_sorties</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="632" parent="69" name="code">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="633" parent="69" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="634" parent="69" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="635" parent="70" name="code">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="636" parent="70" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="637" parent="70" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="638" parent="71" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="639" parent="71" name="code">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="640" parent="71" name="icone">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="641" parent="71" name="libelle">
+      <Position>4</Position>
+      <DataType>varchar(250)|0</DataType>
+    </column>
+    <column id="642" parent="71" name="statut">
+      <Position>5</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <key id="643" parent="71" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="644" parent="72" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="645" parent="72" name="conducteur">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="646" parent="72" name="date_cloture">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="647" parent="72" name="date_deb">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="648" parent="72" name="date_deb_charg">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="649" parent="72" name="date_deb_decharg">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="650" parent="72" name="date_fin_charg">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="651" parent="72" name="date_fin_decharg">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="652" parent="72" name="date_prevue_fin">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="653" parent="72" name="date_reel_fin">
+      <Position>10</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="654" parent="72" name="date_utilsa">
+      <Position>11</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="655" parent="72" name="etat">
+      <Position>12</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="656" parent="72" name="kilo_depart">
+      <Position>13</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="657" parent="72" name="kilo_retour">
+      <Position>14</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="658" parent="72" name="nature">
+      <Position>15</Position>
+      <DataType>varchar(1)|0</DataType>
+    </column>
+    <column id="659" parent="72" name="niv_carb_dep">
+      <Position>16</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="660" parent="72" name="niv_carb_ret">
+      <Position>17</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="661" parent="72" name="num_ordre">
+      <Position>18</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="662" parent="72" name="ref_aller">
+      <Position>19</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="663" parent="72" name="remis_bord">
+      <Position>20</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="664" parent="72" name="travaux">
+      <Position>21</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="665" parent="72" name="type_trajet">
+      <Position>22</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="666" parent="72" name="client">
+      <Position>23</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="667" parent="72" name="activite">
+      <Position>24</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="668" parent="72" name="remorque">
+      <Position>25</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="669" parent="72" name="trajet">
+      <Position>26</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="670" parent="72" name="vehicule">
+      <Position>27</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="671" parent="72" name="FKan8nxxygf1sjgry0gyi6jbpwt">
+      <ColNames>vehicule</ColNames>
+    </index>
+    <index id="672" parent="72" name="FKb0h7lixc49dy1woj0eoybef8k">
+      <ColNames>client</ColNames>
+    </index>
+    <index id="673" parent="72" name="FKiwypghnp5h94mcn7jvmhpnt56">
+      <ColNames>activite</ColNames>
+    </index>
+    <index id="674" parent="72" name="FKlupir5rjkwai8elvibqca4ccc">
+      <ColNames>trajet</ColNames>
+    </index>
+    <index id="675" parent="72" name="FKs1xbuoqlf5kdxn2r8domcu9k9">
+      <ColNames>remorque</ColNames>
+    </index>
+    <key id="676" parent="72" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="677" parent="72" name="FKb0h7lixc49dy1woj0eoybef8k">
+      <ColNames>client</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_clients</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="678" parent="72" name="FKiwypghnp5h94mcn7jvmhpnt56">
+      <ColNames>activite</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_activites</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="679" parent="72" name="FKs1xbuoqlf5kdxn2r8domcu9k9">
+      <ColNames>remorque</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_remorques</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="680" parent="72" name="FKlupir5rjkwai8elvibqca4ccc">
+      <ColNames>trajet</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_trajets</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="681" parent="72" name="FKan8nxxygf1sjgry0gyi6jbpwt">
+      <ColNames>vehicule</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_vehicules</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="682" parent="73" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="683" parent="73" name="date_ach">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="684" parent="73" name="montant">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="685" parent="73" name="num_bon">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="686" parent="73" name="pu">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="687" parent="73" name="qte">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="688" parent="73" name="station">
+      <Position>7</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="689" parent="73" name="fournisseur">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="690" parent="73" name="mission">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="691" parent="73" name="FK3nj5fvunvyv7qhnohc8ietrua">
+      <ColNames>fournisseur</ColNames>
+    </index>
+    <index id="692" parent="73" name="FKmmo1r50co7u6y5v4gnhovbpkq">
+      <ColNames>mission</ColNames>
+    </index>
+    <key id="693" parent="73" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="694" parent="73" name="FK3nj5fvunvyv7qhnohc8ietrua">
+      <ColNames>fournisseur</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_fournisseurs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="695" parent="73" name="FKmmo1r50co7u6y5v4gnhovbpkq">
+      <ColNames>mission</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_missions</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="696" parent="74" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="697" parent="74" name="date_enreg">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="698" parent="74" name="montant">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="699" parent="74" name="observation">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="700" parent="74" name="pu">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="701" parent="74" name="qte">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="702" parent="74" name="founisseur">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="703" parent="74" name="mission">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="704" parent="74" name="type_chage">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="705" parent="74" name="FK1h72076lesn9eaeu3n82elfdm">
+      <ColNames>type_chage</ColNames>
+    </index>
+    <index id="706" parent="74" name="FK97o9i24x44kupobtqrxg1yd81">
+      <ColNames>mission</ColNames>
+    </index>
+    <index id="707" parent="74" name="FKq2ppw40rpntcxo348a66o7t1d">
+      <ColNames>founisseur</ColNames>
+    </index>
+    <key id="708" parent="74" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="709" parent="74" name="FKq2ppw40rpntcxo348a66o7t1d">
+      <ColNames>founisseur</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_fournisseurs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="710" parent="74" name="FK97o9i24x44kupobtqrxg1yd81">
+      <ColNames>mission</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_missions</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="711" parent="74" name="FK1h72076lesn9eaeu3n82elfdm">
+      <ColNames>type_chage</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_types_charges</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="712" parent="75" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="713" parent="75" name="conducteur">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="714" parent="75" name="role">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="715" parent="75" name="mission">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="716" parent="75" name="FK6ors7suenpxda8tt2u170l4ud">
+      <ColNames>conducteur</ColNames>
+    </index>
+    <index id="717" parent="75" name="FKfqa7qgcdqs5c0rfrxh39ye95p">
+      <ColNames>role</ColNames>
+    </index>
+    <index id="718" parent="75" name="FKkkwqguiedr51iu7gim55gjby6">
+      <ColNames>mission</ColNames>
+    </index>
+    <key id="719" parent="75" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="720" parent="75" name="FK6ors7suenpxda8tt2u170l4ud">
+      <ColNames>conducteur</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_conducteurs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="721" parent="75" name="FKfqa7qgcdqs5c0rfrxh39ye95p">
+      <ColNames>role</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_conducteurs_roles</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="722" parent="75" name="FKkkwqguiedr51iu7gim55gjby6">
+      <ColNames>mission</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_missions</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="723" parent="76" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="724" parent="76" name="date_ent">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="725" parent="76" name="garage">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="726" parent="76" name="mecano">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="727" parent="76" name="montant">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="728" parent="76" name="observation">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="729" parent="76" name="founisseur">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="730" parent="76" name="mission">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="731" parent="76" name="type_ent">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="732" parent="76" name="FKj64kiqrha2ak6r3cwrggnx3g0">
+      <ColNames>mission</ColNames>
+    </index>
+    <index id="733" parent="76" name="FKj8cuti757malm2drf5tc656ud">
+      <ColNames>type_ent</ColNames>
+    </index>
+    <index id="734" parent="76" name="FKsqajdt4q90jgfehyospjmnccx">
+      <ColNames>founisseur</ColNames>
+    </index>
+    <key id="735" parent="76" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="736" parent="76" name="FKsqajdt4q90jgfehyospjmnccx">
+      <ColNames>founisseur</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_fournisseurs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="737" parent="76" name="FKj64kiqrha2ak6r3cwrggnx3g0">
+      <ColNames>mission</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_missions</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="738" parent="76" name="FKj8cuti757malm2drf5tc656ud">
+      <ColNames>type_ent</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_types_entretiens</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="739" parent="77" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="740" parent="77" name="amende">
+      <Position>2</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="741" parent="77" name="frais_divers">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="742" parent="77" name="libelle">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="743" parent="77" name="retrait_papier">
+      <Position>5</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="744" parent="77" name="retrait_vehicule">
+      <Position>6</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="745" parent="77" name="mission">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="746" parent="77" name="type_infraction">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="747" parent="77" name="FKqyacyjjse6p1fqnjjn0xg4o07">
+      <ColNames>type_infraction</ColNames>
+    </index>
+    <index id="748" parent="77" name="FKrn6ct567akhjnwdwagpesdmi0">
+      <ColNames>mission</ColNames>
+    </index>
+    <key id="749" parent="77" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="750" parent="77" name="FKrn6ct567akhjnwdwagpesdmi0">
+      <ColNames>mission</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_missions</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="751" parent="77" name="FKqyacyjjse6p1fqnjjn0xg4o07">
+      <ColNames>type_infraction</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_types_infractions</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="752" parent="78" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="753" parent="78" name="constat">
+      <Position>2</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="754" parent="78" name="corporel">
+      <Position>3</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="755" parent="78" name="date_acc">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="756" parent="78" name="lieu">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="757" parent="78" name="materiel">
+      <Position>6</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="758" parent="78" name="mortel">
+      <Position>7</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="759" parent="78" name="rapport">
+      <Position>8</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="760" parent="78" name="mission">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="761" parent="78" name="FK3xm00ho0pf4j651vfmgr34xjt">
+      <ColNames>mission</ColNames>
+    </index>
+    <key id="762" parent="78" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="763" parent="78" name="FK3xm00ho0pf4j651vfmgr34xjt">
+      <ColNames>mission</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_missions</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="764" parent="79" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="765" parent="79" name="categorie">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="766" parent="79" name="confort">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="767" parent="79" name="gamme">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="768" parent="79" name="nom">
+      <Position>5</Position>
+      <DataType>varchar(250)|0</DataType>
+    </column>
+    <column id="769" parent="79" name="statut">
+      <Position>6</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="770" parent="79" name="marque">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="771" parent="79" name="FKoch7jejr72a8h9ieyha2dqeab">
+      <ColNames>marque</ColNames>
+    </index>
+    <key id="772" parent="79" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="773" parent="79" name="FKoch7jejr72a8h9ieyha2dqeab">
+      <ColNames>marque</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_marques</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="774" parent="80" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="775" parent="80" name="code">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="776" parent="80" name="libelle">
+      <Position>3</Position>
+      <DataType>varchar(250)|0</DataType>
+    </column>
+    <column id="777" parent="80" name="statut">
+      <Position>4</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="778" parent="80" name="structure">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="779" parent="80" name="parent">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="780" parent="80" name="FKnow5lbnwjvcsx2xeqyknc3dh8">
+      <ColNames>parent</ColNames>
+    </index>
+    <index id="781" parent="80" name="FKpt19b2g2d7eu5ld2bvp92833k">
+      <ColNames>structure</ColNames>
+    </index>
+    <key id="782" parent="80" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="783" parent="80" name="FKpt19b2g2d7eu5ld2bvp92833k">
+      <ColNames>structure</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_structures</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="784" parent="80" name="FKnow5lbnwjvcsx2xeqyknc3dh8">
+      <ColNames>parent</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_parcs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="785" parent="81" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="786" parent="81" name="code">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="787" parent="81" name="couleur">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="788" parent="81" name="date_entree_parc">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="789" parent="81" name="immatriculation">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="790" parent="81" name="num_carte_grise">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="791" parent="81" name="num_chassis">
+      <Position>7</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="792" parent="81" name="num_ordre">
+      <Position>8</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="793" parent="81" name="acquisition">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="794" parent="81" name="parc">
+      <Position>10</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="795" parent="81" name="FKj0d631rjcq7yv436i8rtsctlg">
+      <ColNames>parc</ColNames>
+    </index>
+    <index id="796" parent="81" name="FKspry5sj9r5u5dktubm384ruo5">
+      <ColNames>acquisition</ColNames>
+    </index>
+    <key id="797" parent="81" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="798" parent="81" name="FKspry5sj9r5u5dktubm384ruo5">
+      <ColNames>acquisition</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_acquisitions</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="799" parent="81" name="FKj0d631rjcq7yv436i8rtsctlg">
+      <ColNames>parc</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_parcs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="800" parent="82" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="801" parent="82" name="date_fin">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="802" parent="82" name="datedebut">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="803" parent="82" name="prix">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="804" parent="82" name="clients">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="805" parent="82" name="vehicule">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="806" parent="82" name="FK8j12j87i72k0w92xa51pdxnw8">
+      <ColNames>clients</ColNames>
+    </index>
+    <index id="807" parent="82" name="FKinc3kdr4vfdsnx1l5kukoo7w7">
+      <ColNames>vehicule</ColNames>
+    </index>
+    <key id="808" parent="82" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="809" parent="82" name="FK8j12j87i72k0w92xa51pdxnw8">
+      <ColNames>clients</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_clients</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="810" parent="82" name="FKinc3kdr4vfdsnx1l5kukoo7w7">
+      <ColNames>vehicule</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_vehicules</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="811" parent="83" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="812" parent="83" name="description">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="813" parent="83" name="distance">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="814" parent="83" name="duree">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="815" parent="83" name="libelle">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="816" parent="83" name="arrive">
+      <Position>6</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="817" parent="83" name="depart">
+      <Position>7</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <index id="818" parent="83" name="FK1s49byoxgukfifkowe98mf71c">
+      <ColNames>depart</ColNames>
+    </index>
+    <index id="819" parent="83" name="FK5cg056bgkqibvjr65sdt2h3r5">
+      <ColNames>arrive</ColNames>
+    </index>
+    <key id="820" parent="83" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="821" parent="83" name="FK5cg056bgkqibvjr65sdt2h3r5">
+      <ColNames>arrive</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_localites</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="822" parent="83" name="FK1s49byoxgukfifkowe98mf71c">
+      <ColNames>depart</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_localites</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <column id="823" parent="84" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="824" parent="84" name="consommation">
+      <Position>2</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="825" parent="84" name="description">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="826" parent="84" name="fraisroute">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="827" parent="84" name="libelle">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="828" parent="84" name="prime">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="829" parent="84" name="model">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="830" parent="84" name="trajet">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="831" parent="84" name="FKbnb78uahj5238gt6vf96vgx6g">
+      <ColNames>model</ColNames>
+    </index>
+    <index id="832" parent="84" name="FKt3rrvw38iib30kp4mq9pgo7fd">
+      <ColNames>trajet</ColNames>
+    </index>
+    <key id="833" parent="84" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="834" parent="84" name="FKbnb78uahj5238gt6vf96vgx6g">
+      <ColNames>model</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_modeles</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="835" parent="84" name="FKt3rrvw38iib30kp4mq9pgo7fd">
+      <ColNames>trajet</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_trajets</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="836" parent="85" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="837" parent="85" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="838" parent="85" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="839" parent="86" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="840" parent="86" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="841" parent="86" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="842" parent="87" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="843" parent="87" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="844" parent="87" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="845" parent="88" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="846" parent="88" name="anc_num_imm">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="847" parent="88" name="annee">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="848" parent="88" name="boite_vit">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="849" parent="88" name="code">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="850" parent="88" name="code_cle">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="851" parent="88" name="cons_ex_urb">
+      <Position>7</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="852" parent="88" name="cons_mix">
+      <Position>8</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="853" parent="88" name="cons_urb">
+      <Position>9</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="854" parent="88" name="couleur">
+      <Position>10</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="855" parent="88" name="cylindre">
+      <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="856" parent="88" name="date_entree_parc">
+      <Position>12</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="857" parent="88" name="date_mis_circ">
+      <Position>13</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="858" parent="88" name="date_restitution">
+      <Position>14</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="859" parent="88" name="dimensions">
+      <Position>15</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="860" parent="88" name="emiss_co2">
+      <Position>16</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="861" parent="88" name="energie">
+      <Position>17</Position>
+      <DataType>varchar(1)|0</DataType>
+    </column>
+    <column id="862" parent="88" name="genre">
+      <Position>18</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="863" parent="88" name="icone">
+      <Position>19</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="864" parent="88" name="immatriculation">
+      <Position>20</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="865" parent="88" name="nbre_porte">
+      <Position>21</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="866" parent="88" name="num_carte_grise">
+      <Position>22</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="867" parent="88" name="num_chassis">
+      <Position>23</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="868" parent="88" name="num_imputation">
+      <Position>24</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="869" parent="88" name="num_ordre">
+      <Position>25</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="870" parent="88" name="prix">
+      <Position>26</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="871" parent="88" name="ptc">
+      <Position>27</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="872" parent="88" name="ptv">
+      <Position>28</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="873" parent="88" name="puis_adm">
+      <Position>29</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="874" parent="88" name="puis_reel">
+      <Position>30</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="875" parent="88" name="vmax">
+      <Position>31</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="876" parent="88" name="vol_coff_max">
+      <Position>32</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="877" parent="88" name="vol_coff_min">
+      <Position>33</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="878" parent="88" name="acquisition">
+      <Position>34</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="879" parent="88" name="conducteur">
+      <Position>35</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="880" parent="88" name="modele">
+      <Position>36</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="881" parent="88" name="parc">
+      <Position>37</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="882" parent="88" name="statut_vehicule">
+      <Position>38</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="883" parent="88" name="FK34vl1u0tln6ng3y3210348slo">
+      <ColNames>modele</ColNames>
+    </index>
+    <index id="884" parent="88" name="FKccxrt0a4k61vrfm7953txo73h">
+      <ColNames>statut_vehicule</ColNames>
+    </index>
+    <index id="885" parent="88" name="FKkatwu2xfnbqduy6plg6sshkpx">
+      <ColNames>parc</ColNames>
+    </index>
+    <index id="886" parent="88" name="FKplu5d14rfgddf31jcrysmy9dg">
+      <ColNames>conducteur</ColNames>
+    </index>
+    <index id="887" parent="88" name="FKsg71o3y1j682qy5amu3pscb2u">
+      <ColNames>acquisition</ColNames>
+    </index>
+    <key id="888" parent="88" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="889" parent="88" name="FKsg71o3y1j682qy5amu3pscb2u">
+      <ColNames>acquisition</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_acquisitions</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="890" parent="88" name="FKplu5d14rfgddf31jcrysmy9dg">
+      <ColNames>conducteur</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_conducteurs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="891" parent="88" name="FK34vl1u0tln6ng3y3210348slo">
+      <ColNames>modele</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_modeles</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="892" parent="88" name="FKkatwu2xfnbqduy6plg6sshkpx">
+      <ColNames>parc</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_parcs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="893" parent="88" name="FKccxrt0a4k61vrfm7953txo73h">
+      <ColNames>statut_vehicule</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_vehicules_statuts</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="894" parent="89" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="895" parent="89" name="description">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="896" parent="89" name="fichier">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="897" parent="89" name="libelle">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="898" parent="89" name="vehicule">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="899" parent="89" name="FK1cgjandfurbtc5f90mhubpxw1">
+      <ColNames>vehicule</ColNames>
+    </index>
+    <key id="900" parent="89" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="901" parent="89" name="FK1cgjandfurbtc5f90mhubpxw1">
+      <ColNames>vehicule</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_vehicules</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="902" parent="90" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="903" parent="90" name="fichier">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="904" parent="90" name="libelle">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="905" parent="90" name="vehicule">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="906" parent="90" name="FKdmlr7kmvc597ccab2w5rms1ba">
+      <ColNames>vehicule</ColNames>
+    </index>
+    <key id="907" parent="90" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="908" parent="90" name="FKdmlr7kmvc597ccab2w5rms1ba">
+      <ColNames>vehicule</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_vehicules</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="909" parent="91" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="910" parent="91" name="code">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="911" parent="91" name="libelle">
+      <Position>3</Position>
+      <DataType>varchar(250)|0</DataType>
+    </column>
+    <key id="912" parent="91" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="913" parent="92" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="914" parent="92" name="annee">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="915" parent="92" name="date_vign">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="916" parent="92" name="montant">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="917" parent="92" name="num_vignette">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="918" parent="92" name="vehicule">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="919" parent="92" name="FKkoqe9r7kujvj7eefmkuf4k5bb">
+      <ColNames>vehicule</ColNames>
+    </index>
+    <key id="920" parent="92" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="921" parent="92" name="FKkoqe9r7kujvj7eefmkuf4k5bb">
+      <ColNames>vehicule</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_vehicules</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="922" parent="93" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="923" parent="93" name="annee">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="924" parent="93" name="date_vis">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="925" parent="93" name="montant">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="926" parent="93" name="observation">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="927" parent="93" name="vehicule">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="928" parent="93" name="FKaimcavxl43sd6605x5o34px1h">
+      <ColNames>vehicule</ColNames>
+    </index>
+    <key id="929" parent="93" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="930" parent="93" name="FKaimcavxl43sd6605x5o34px1h">
+      <ColNames>vehicule</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_vehicules</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="931" parent="94" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="932" parent="94" name="barecode">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="933" parent="94" name="code">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="934" parent="94" name="date_ajout">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="935" parent="94" name="nom">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="936" parent="94" name="note">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="937" parent="94" name="photo">
+      <Position>7</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="938" parent="94" name="pump">
+      <Position>8</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="939" parent="94" name="qrcode">
+      <Position>9</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="940" parent="94" name="qte_dispo">
+      <Position>10</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="941" parent="94" name="qte_entree">
+      <Position>11</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="942" parent="94" name="qte_reelle">
+      <Position>12</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="943" parent="94" name="qte_sortie">
+      <Position>13</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="944" parent="94" name="stock_alert">
+      <Position>14</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="945" parent="94" name="stock_initial">
+      <Position>15</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="946" parent="94" name="stock_max">
+      <Position>16</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="947" parent="94" name="stock_mini">
+      <Position>17</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="948" parent="94" name="tva">
+      <Position>18</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="949" parent="94" name="unite">
+      <Position>19</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="950" parent="94" name="famille">
+      <Position>20</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="951" parent="94" name="FK2392pc67p1gmh475jbhu1mvo7">
+      <ColNames>unite</ColNames>
+    </index>
+    <index id="952" parent="94" name="FK5roks5b87it4bd0h25oc7ktqg">
+      <ColNames>famille</ColNames>
+    </index>
+    <key id="953" parent="94" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="954" parent="94" name="FK2392pc67p1gmh475jbhu1mvo7">
+      <ColNames>unite</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_unites</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="955" parent="94" name="FK5roks5b87it4bd0h25oc7ktqg">
+      <ColNames>famille</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_articles_familles</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="956" parent="95" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="957" parent="95" name="valeur">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="958" parent="95" name="article">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="959" parent="95" name="champ">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="960" parent="95" name="FK3gufewm1pvh24pbhaxts6a7nn">
+      <ColNames>champ</ColNames>
+    </index>
+    <index id="961" parent="95" name="FKl9t8i8fggx4ktmekl244eikgq">
+      <ColNames>article</ColNames>
+    </index>
+    <key id="962" parent="95" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="963" parent="95" name="FKl9t8i8fggx4ktmekl244eikgq">
+      <ColNames>article</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_articles</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="964" parent="95" name="FK3gufewm1pvh24pbhaxts6a7nn">
+      <ColNames>champ</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_articles_familles_champs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="965" parent="96" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="966" parent="96" name="nom">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="967" parent="96" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="968" parent="97" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="969" parent="97" name="code">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="970" parent="97" name="estsql">
+      <Position>3</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="971" parent="97" name="etat">
+      <Position>4</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="972" parent="97" name="libelle">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="973" parent="97" name="obligatoire">
+      <Position>6</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="974" parent="97" name="valeur">
+      <Position>7</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="975" parent="97" name="valeurs">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="976" parent="97" name="nature">
+      <Position>9</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="977" parent="97" name="type_champ">
+      <Position>10</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="978" parent="97" name="famille">
+      <Position>11</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="979" parent="97" name="FKg8804yl3k9m47w52g8mv9jpvk">
+      <ColNames>famille</ColNames>
+    </index>
+    <index id="980" parent="97" name="FKghqouh1aqj4bgimy4ixtay5ya">
+      <ColNames>type_champ</ColNames>
+    </index>
+    <index id="981" parent="97" name="FKmsv175woms1lvacn3gdjifkke">
+      <ColNames>nature</ColNames>
+    </index>
+    <key id="982" parent="97" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="983" parent="97" name="FKmsv175woms1lvacn3gdjifkke">
+      <ColNames>nature</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_natures_champs</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="984" parent="97" name="FKghqouh1aqj4bgimy4ixtay5ya">
+      <ColNames>type_champ</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_types_champs</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="985" parent="97" name="FKg8804yl3k9m47w52g8mv9jpvk">
+      <ColNames>famille</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_articles_familles</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="986" parent="98" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="987" parent="98" name="date_bon">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="988" parent="98" name="description">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="989" parent="98" name="diagnostic">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="990" parent="98" name="etat">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="991" parent="98" name="num_bon">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="992" parent="98" name="vehicule">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="993" parent="98" name="magasin">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="994" parent="98" name="FKcrexeqhaoonrdt5jxiq7abjum">
+      <ColNames>vehicule</ColNames>
+    </index>
+    <index id="995" parent="98" name="FKkojmc4ciaoy6q3c58j13laey6">
+      <ColNames>magasin</ColNames>
+    </index>
+    <key id="996" parent="98" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="997" parent="98" name="FKcrexeqhaoonrdt5jxiq7abjum">
+      <ColNames>vehicule</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_vehicules</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="998" parent="98" name="FKkojmc4ciaoy6q3c58j13laey6">
+      <ColNames>magasin</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_magasins</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="999" parent="99" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="1000" parent="99" name="date_bon">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="1001" parent="99" name="description">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="1002" parent="99" name="diagnostic">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1003" parent="99" name="etat">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1004" parent="99" name="num_bon">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="1005" parent="99" name="structure">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1006" parent="99" name="vehicule">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1007" parent="99" name="bon_ci">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1008" parent="99" name="magasin">
+      <Position>10</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="1009" parent="99" name="FK4fqyj3rioyymlk2lmqv99k710">
+      <ColNames>magasin</ColNames>
+    </index>
+    <index id="1010" parent="99" name="FKbg5l397s80xtjgldi17mvebjb">
+      <ColNames>structure</ColNames>
+    </index>
+    <index id="1011" parent="99" name="FKcayahscj64bomrbablim2u8ai">
+      <ColNames>vehicule</ColNames>
+    </index>
+    <index id="1012" parent="99" name="FKd694bulpp8byj0jcles44r6fk">
+      <ColNames>bon_ci</ColNames>
+    </index>
+    <key id="1013" parent="99" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="1014" parent="99" name="FKbg5l397s80xtjgldi17mvebjb">
+      <ColNames>structure</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_structures</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="1015" parent="99" name="FKcayahscj64bomrbablim2u8ai">
+      <ColNames>vehicule</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_vehicules</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="1016" parent="99" name="FKd694bulpp8byj0jcles44r6fk">
+      <ColNames>bon_ci</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_bons_commandes_internes</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="1017" parent="99" name="FK4fqyj3rioyymlk2lmqv99k710">
+      <ColNames>magasin</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_magasins</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="1018" parent="100" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="1019" parent="100" name="designation">
+      <Position>2</Position>
+      <DataType>varchar(300)|0</DataType>
+    </column>
+    <column id="1020" parent="100" name="qte">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1021" parent="100" name="unite">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="1022" parent="100" name="article">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1023" parent="100" name="bon">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="1024" parent="100" name="FKgdij2e7ijnooq32r2a9ty201w">
+      <ColNames>unite</ColNames>
+    </index>
+    <index id="1025" parent="100" name="FKj8uxh2euy17btkm7ytwg7vuf2">
+      <ColNames>bon</ColNames>
+    </index>
+    <index id="1026" parent="100" name="FKm5j0xj9n3i17kt3kk8j5sa0cm">
+      <ColNames>article</ColNames>
+    </index>
+    <key id="1027" parent="100" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="1028" parent="100" name="FKgdij2e7ijnooq32r2a9ty201w">
+      <ColNames>unite</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_unites</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="1029" parent="100" name="FKm5j0xj9n3i17kt3kk8j5sa0cm">
+      <ColNames>article</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_articles</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="1030" parent="100" name="FKj8uxh2euy17btkm7ytwg7vuf2">
+      <ColNames>bon</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_bons_sorties</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="1031" parent="101" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="1032" parent="101" name="date_debut">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="1033" parent="101" name="date_fin">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="1034" parent="101" name="etat">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1035" parent="101" name="mode_inv">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1036" parent="101" name="numero">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="1037" parent="101" name="personne">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1038" parent="101" name="magasin">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="1039" parent="101" name="FKemgoejrejews0dbord6c67tnm">
+      <ColNames>magasin</ColNames>
+    </index>
+    <key id="1040" parent="101" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="1041" parent="101" name="FKemgoejrejews0dbord6c67tnm">
+      <ColNames>magasin</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_magasins</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="1042" parent="102" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="1043" parent="102" name="code">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="1044" parent="102" name="depot">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="1045" parent="102" name="description">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="1046" parent="102" name="famille">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="1047" parent="102" name="libelle_article">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="1048" parent="102" name="nbr_piece">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1049" parent="102" name="pump">
+      <Position>8</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1050" parent="102" name="pump_total">
+      <Position>9</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1051" parent="102" name="qte_util">
+      <Position>10</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1052" parent="102" name="quantite">
+      <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1053" parent="102" name="unite">
+      <Position>12</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="1054" parent="102" name="inventaire">
+      <Position>13</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="1055" parent="102" name="FKbxp56gpdiyyjrggoyf4k0w7bq">
+      <ColNames>inventaire</ColNames>
+    </index>
+    <key id="1056" parent="102" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="1057" parent="102" name="FKbxp56gpdiyyjrggoyf4k0w7bq">
+      <ColNames>inventaire</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_inventaires</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="1058" parent="103" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="1059" parent="103" name="code">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="1060" parent="103" name="libelle">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <index id="1061" parent="103" name="UKjrlggmenvpv325jso3pjkqpd3">
+      <ColNames>code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="1062" parent="103" name="UK_jrlggmenvpv325jso3pjkqpd3">
+      <ColNames>code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="1063" parent="103" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="1064" parent="103" name="UK_jrlggmenvpv325jso3pjkqpd3">
+      <ColNames>code</ColNames>
+      <UnderlyingIndexName>UK_jrlggmenvpv325jso3pjkqpd3</UnderlyingIndexName>
+    </key>
+    <key id="1065" parent="103" name="UKjrlggmenvpv325jso3pjkqpd3">
+      <ColNames>code</ColNames>
+      <UnderlyingIndexName>UKjrlggmenvpv325jso3pjkqpd3</UnderlyingIndexName>
+    </key>
+    <column id="1066" parent="104" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="1067" parent="104" name="pump">
+      <Position>2</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1068" parent="104" name="qte_dispo">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1069" parent="104" name="qte_entree">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1070" parent="104" name="qte_reelle">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1071" parent="104" name="qte_sortie">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1072" parent="104" name="article">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1073" parent="104" name="magasin">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="1074" parent="104" name="FKbuhdu435cgjjr52s3wu97j7kf">
+      <ColNames>magasin</ColNames>
+    </index>
+    <index id="1075" parent="104" name="FKf7a7jxr9obdys6begt26la1ab">
+      <ColNames>article</ColNames>
+    </index>
+    <key id="1076" parent="104" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="1077" parent="104" name="FKf7a7jxr9obdys6begt26la1ab">
+      <ColNames>article</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_articles</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="1078" parent="104" name="FKbuhdu435cgjjr52s3wu97j7kf">
+      <ColNames>magasin</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_magasins</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="1079" parent="105" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="1080" parent="105" name="commentaire">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="1081" parent="105" name="date_bon">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="1082" parent="105" name="num_bon_cde">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="1083" parent="105" name="num_bon_liv">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="1084" parent="105" name="num_bon_sti">
+      <Position>6</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="1085" parent="105" name="pu">
+      <Position>7</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1086" parent="105" name="qte">
+      <Position>8</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1087" parent="105" name="type_mvt">
+      <Position>9</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="1088" parent="105" name="unite">
+      <Position>10</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="1089" parent="105" name="article">
+      <Position>11</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1090" parent="105" name="magasin">
+      <Position>12</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="1091" parent="105" name="FK81kmqnxoh8i5kpnar9igtt9g7">
+      <ColNames>magasin</ColNames>
+    </index>
+    <index id="1092" parent="105" name="FKqg81088sbn2dxsrdlguo925ow">
+      <ColNames>article</ColNames>
+    </index>
+    <index id="1093" parent="105" name="FKsk44dlmy0g9ypv7y5w4oluqc6">
+      <ColNames>unite</ColNames>
+    </index>
+    <key id="1094" parent="105" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="1095" parent="105" name="FKsk44dlmy0g9ypv7y5w4oluqc6">
+      <ColNames>unite</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_unites</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="1096" parent="105" name="FKqg81088sbn2dxsrdlguo925ow">
+      <ColNames>article</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_articles</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="1097" parent="105" name="FK81kmqnxoh8i5kpnar9igtt9g7">
+      <ColNames>magasin</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_magasins</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="1098" parent="106" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="1099" parent="106" name="article">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="1100" parent="106" name="date_entree">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="1101" parent="106" name="pua">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1102" parent="106" name="qte_entree">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1103" parent="106" name="receptionne_par">
+      <Position>6</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="1104" parent="106" name="fournisseur">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1105" parent="106" name="stock">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="1106" parent="106" name="FKo7ibhd9j6yy1ahbhfc82t1a2i">
+      <ColNames>stock</ColNames>
+    </index>
+    <index id="1107" parent="106" name="FKpdsnwg7e6aradnhtpoesx1or">
+      <ColNames>fournisseur</ColNames>
+    </index>
+    <key id="1108" parent="106" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="1109" parent="106" name="FKpdsnwg7e6aradnhtpoesx1or">
+      <ColNames>fournisseur</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_fournisseurs</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="1110" parent="106" name="FKo7ibhd9j6yy1ahbhfc82t1a2i">
+      <ColNames>stock</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_stocks</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="1111" parent="107" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="1112" parent="107" name="article">
+      <Position>2</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="1113" parent="107" name="date_sortie">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="1114" parent="107" name="emporter_par">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="1115" parent="107" name="puv">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1116" parent="107" name="qte_sortie">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1117" parent="107" name="client">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1118" parent="107" name="stock">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="1119" parent="107" name="FK9adrk1ry8bwgdv3u6y187veue">
+      <ColNames>client</ColNames>
+    </index>
+    <index id="1120" parent="107" name="FKf6wqw62e1h2jv2wgsp90dqigk">
+      <ColNames>stock</ColNames>
+    </index>
+    <key id="1121" parent="107" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="1122" parent="107" name="FK9adrk1ry8bwgdv3u6y187veue">
+      <ColNames>client</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_clients</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="1123" parent="107" name="FKf6wqw62e1h2jv2wgsp90dqigk">
+      <ColNames>stock</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>stk_stocks</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="1124" parent="108" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="1125" parent="108" name="date_encaissement">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="1126" parent="108" name="date_paiement">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="1127" parent="108" name="etat">
+      <Position>4</Position>
+      <DataType>tinyint(4)|0</DataType>
+    </column>
+    <column id="1128" parent="108" name="montant_ttc">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1129" parent="108" name="num_bon">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="1130" parent="108" name="num_cheque">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="1131" parent="108" name="origine">
+      <Position>8</Position>
+      <DataType>varchar(3)|0</DataType>
+    </column>
+    <column id="1132" parent="108" name="recouvrement">
+      <Position>9</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="1133" parent="108" name="ref_doc">
+      <Position>10</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="1134" parent="108" name="banque">
+      <Position>11</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1135" parent="108" name="caisse">
+      <Position>12</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1136" parent="108" name="mode_paiement">
+      <Position>13</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="1137" parent="108" name="facture">
+      <Position>14</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="1138" parent="108" name="FK1iwkarin1b599olb17wccm67f">
+      <ColNames>caisse</ColNames>
+    </index>
+    <index id="1139" parent="108" name="FKaxul0lb634n11y17p7qbftfqp">
+      <ColNames>facture</ColNames>
+    </index>
+    <index id="1140" parent="108" name="FKkegyh8ht1c5i5i4j2pveqw77k">
+      <ColNames>banque</ColNames>
+    </index>
+    <index id="1141" parent="108" name="FKm8u409iqmhtjtrbqju7j5bdg9">
+      <ColNames>mode_paiement</ColNames>
+    </index>
+    <key id="1142" parent="108" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="1143" parent="108" name="FKkegyh8ht1c5i5i4j2pveqw77k">
+      <ColNames>banque</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_banques</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="1144" parent="108" name="FK1iwkarin1b599olb17wccm67f">
+      <ColNames>caisse</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_caisses</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="1145" parent="108" name="FKm8u409iqmhtjtrbqju7j5bdg9">
+      <ColNames>mode_paiement</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_types_payements</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="1146" parent="108" name="FKaxul0lb634n11y17p7qbftfqp">
+      <ColNames>facture</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>vte_factures</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="1147" parent="109" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="1148" parent="109" name="date_annule">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="1149" parent="109" name="date_facture">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="1150" parent="109" name="date_livraison">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="1151" parent="109" name="date_relance">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="1152" parent="109" name="date_valide">
+      <Position>6</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="1153" parent="109" name="date_validite">
+      <Position>7</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="1154" parent="109" name="etat">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1155" parent="109" name="exo_tva">
+      <Position>9</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="1156" parent="109" name="gele">
+      <Position>10</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="1157" parent="109" name="motif">
+      <Position>11</Position>
+      <DataType>varchar(300)|0</DataType>
+    </column>
+    <column id="1158" parent="109" name="motif_annule">
+      <Position>12</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="1159" parent="109" name="num_bon">
+      <Position>13</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="1160" parent="109" name="num_facture">
+      <Position>14</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="1161" parent="109" name="observation">
+      <Position>15</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <column id="1162" parent="109" name="solde">
+      <Position>16</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="1163" parent="109" name="tot_ht">
+      <Position>17</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1164" parent="109" name="tot_rabais">
+      <Position>18</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1165" parent="109" name="tot_reg">
+      <Position>19</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1166" parent="109" name="tot_remise">
+      <Position>20</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1167" parent="109" name="tot_ttc">
+      <Position>21</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1168" parent="109" name="tot_tva">
+      <Position>22</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1169" parent="109" name="mission">
+      <Position>23</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="1170" parent="109" name="FKmpud5yh21gasvs2lt3g3hsjn4">
+      <ColNames>mission</ColNames>
+    </index>
+    <key id="1171" parent="109" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="1172" parent="109" name="FKmpud5yh21gasvs2lt3g3hsjn4">
+      <ColNames>mission</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_missions</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="1173" parent="110" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="1174" parent="110" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="1175" parent="110" name="qte">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1176" parent="110" name="qte_livre">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="1177" parent="110" name="unite">
+      <Position>5</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="1178" parent="110" name="produit">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1179" parent="110" name="bon">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="1180" parent="110" name="FKcdlv8aokdckvo0dil1lwjw7lq">
+      <ColNames>produit</ColNames>
+    </index>
+    <index id="1181" parent="110" name="FKmse2olrh0iyc1lhkuk74mgy6">
+      <ColNames>bon</ColNames>
+    </index>
+    <key id="1182" parent="110" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="1183" parent="110" name="FKcdlv8aokdckvo0dil1lwjw7lq">
+      <ColNames>produit</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_produits</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="1184" parent="110" name="FKmse2olrh0iyc1lhkuk74mgy6">
+      <ColNames>bon</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>vte_bons_livraisons</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="1185" parent="111" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1186" parent="111" name="date_devis">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="1187" parent="111" name="ref_devis">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="1188" parent="111" name="tva">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1189" parent="111" name="client">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1190" parent="111" name="type_payement">
+      <Position>6</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <index id="1191" parent="111" name="FKdoqwtla7yrqvd3dxjpld2nw9i">
+      <ColNames>client</ColNames>
+    </index>
+    <index id="1192" parent="111" name="FKk869ggsi9pueasj18fbuavvt9">
+      <ColNames>type_payement</ColNames>
+    </index>
+    <key id="1193" parent="111" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="1194" parent="111" name="FKdoqwtla7yrqvd3dxjpld2nw9i">
+      <ColNames>client</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_clients</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="1195" parent="111" name="FKk869ggsi9pueasj18fbuavvt9">
+      <ColNames>type_payement</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_types_payements</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <column id="1196" parent="112" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1197" parent="112" name="date_charge">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="1198" parent="112" name="description">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="1199" parent="112" name="itneraire">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="1200" parent="112" name="montant_ht">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1201" parent="112" name="nature">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="1202" parent="112" name="num_bordoreau">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="1203" parent="112" name="pu">
+      <Position>8</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1204" parent="112" name="qte">
+      <Position>9</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1205" parent="112" name="devis">
+      <Position>10</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="1206" parent="112" name="FKrtivgh4rbs9n85ti8x6y6k6i5">
+      <ColNames>devis</ColNames>
+    </index>
+    <key id="1207" parent="112" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="1208" parent="112" name="FKrtivgh4rbs9n85ti8x6y6k6i5">
+      <ColNames>devis</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>vte_devis</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="1209" parent="113" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="1210" parent="113" name="date_fac">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="1211" parent="113" name="montant_ht">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1212" parent="113" name="montant_ttc">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1213" parent="113" name="montant_tva">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1214" parent="113" name="num_fac">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="1215" parent="113" name="paye">
+      <Position>7</Position>
+      <DataType>tinyint(4)|0</DataType>
+    </column>
+    <column id="1216" parent="113" name="tva">
+      <Position>8</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1217" parent="113" name="client">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1218" parent="113" name="type_paiement">
+      <Position>10</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <index id="1219" parent="113" name="FK2pal311pyfba3hxgf9qwfom2l">
+      <ColNames>type_paiement</ColNames>
+    </index>
+    <index id="1220" parent="113" name="FK609v8la7dkdej24fyl8700j5u">
+      <ColNames>client</ColNames>
+    </index>
+    <key id="1221" parent="113" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="1222" parent="113" name="FK609v8la7dkdej24fyl8700j5u">
+      <ColNames>client</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_clients</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="1223" parent="113" name="FK2pal311pyfba3hxgf9qwfom2l">
+      <ColNames>type_paiement</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>com_types_payements</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <column id="1224" parent="114" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="1225" parent="114" name="libelle">
+      <Position>2</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="1226" parent="114" name="montant_ht">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1227" parent="114" name="pu">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1228" parent="114" name="qte">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="1229" parent="114" name="ref_prod">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="1230" parent="114" name="mission">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="1231" parent="114" name="facture">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="1232" parent="114" name="FKryx5pqme2hx40ptqbid1qq4er">
+      <ColNames>facture</ColNames>
+    </index>
+    <index id="1233" parent="114" name="FKtjvfu4trfgvias7qbx6oiwf6u">
+      <ColNames>mission</ColNames>
+    </index>
+    <key id="1234" parent="114" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="1235" parent="114" name="FKtjvfu4trfgvias7qbx6oiwf6u">
+      <ColNames>mission</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>flt_missions</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="1236" parent="114" name="FKryx5pqme2hx40ptqbid1qq4er">
+      <ColNames>facture</ColNames>
+      <RefSchemaName>ankata_db</RefSchemaName>
+      <RefTableName>vte_factures</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

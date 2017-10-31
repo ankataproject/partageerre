@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.flotte.FltMissionsCarburants" table="flt_missions_carburants" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comFournisseurs" class="com.horus.ankata.core.domain.commons.ComFournisseurs" fetch="select">
+            <column name="fournisseur" />
+        </many-to-one>
+        <many-to-one name="fltMissions" class="com.horus.ankata.core.domain.flotte.FltMissions" fetch="select">
+            <column name="mission" />
+        </many-to-one>
+        <property name="dateAch" type="date">
+            <column name="date_ach" length="10" />
+        </property>
+        <property name="montant" type="java.lang.Double">
+            <column name="montant" precision="22" scale="0" />
+        </property>
+        <property name="numBon" type="string">
+            <column name="num_bon" length="20" />
+        </property>
+        <property name="pu" type="java.lang.Double">
+            <column name="pu" precision="22" scale="0" />
+        </property>
+        <property name="qte" type="java.lang.Double">
+            <column name="qte" precision="22" scale="0" />
+        </property>
+        <property name="station" type="string">
+            <column name="station" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

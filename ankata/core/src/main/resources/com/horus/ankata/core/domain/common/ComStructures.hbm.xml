@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.commons.ComStructures" table="com_structures" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comPays" class="com.horus.ankata.core.domain.commons.ComPays" fetch="select">
+            <column name="pays" length="3" />
+        </many-to-one>
+        <many-to-one name="comStructures" class="com.horus.ankata.core.domain.commons.ComStructures" fetch="select">
+            <column name="parent" />
+        </many-to-one>
+        <property name="code" type="string">
+            <column name="code" length="250" not-null="true" />
+        </property>
+        <property name="dc" type="timestamp">
+            <column name="dc" length="19" />
+        </property>
+        <property name="du" type="timestamp">
+            <column name="du" length="19" />
+        </property>
+        <property name="etat" type="string">
+            <column name="etat" length="2" />
+        </property>
+        <property name="libelle" type="string">
+            <column name="libelle" />
+        </property>
+        <property name="niveau" type="java.lang.Integer">
+            <column name="niveau" />
+        </property>
+        <property name="typeStruc" type="string">
+            <column name="type_struc" length="5" />
+        </property>
+        <property name="ucid" type="java.lang.Long">
+            <column name="ucid" />
+        </property>
+        <property name="uuid" type="java.lang.Long">
+            <column name="uuid" />
+        </property>
+        <set name="comPersonneses" table="com_personnes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="structure" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.commons.ComPersonnes" />
+        </set>
+        <set name="fltParcses" table="flt_parcs" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="structure" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltParcs" />
+        </set>
+        <set name="stkBonsSortieses" table="stk_bons_sorties" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="structure" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.stock.StkBonsSorties" />
+        </set>
+        <set name="comStructureses" table="com_structures" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="parent" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.commons.ComStructures" />
+        </set>
+    </class>
+</hibernate-mapping>

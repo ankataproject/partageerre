@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.stock.StkInventaires" table="stk_inventaires" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="stkMagasins" class="com.horus.ankata.core.domain.stock.StkMagasins" fetch="select">
+            <column name="magasin" />
+        </many-to-one>
+        <property name="dateDebut" type="timestamp">
+            <column name="date_debut" length="19" />
+        </property>
+        <property name="dateFin" type="timestamp">
+            <column name="date_fin" length="19" />
+        </property>
+        <property name="etat" type="java.lang.Integer">
+            <column name="etat" />
+        </property>
+        <property name="modeInv" type="java.lang.Integer">
+            <column name="mode_inv" />
+        </property>
+        <property name="numero" type="string">
+            <column name="numero" length="20" />
+        </property>
+        <property name="personne" type="java.lang.Long">
+            <column name="personne" />
+        </property>
+        <set name="stkInventairesLigneses" table="stk_inventaires_lignes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="inventaire" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.stock.StkInventairesLignes" />
+        </set>
+    </class>
+</hibernate-mapping>

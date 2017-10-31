@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.flotte.FltRemorques" table="flt_remorques" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="fltAcquisitions" class="com.horus.ankata.core.domain.flotte.FltAcquisitions" fetch="select">
+            <column name="acquisition" />
+        </many-to-one>
+        <many-to-one name="fltParcs" class="com.horus.ankata.core.domain.flotte.FltParcs" fetch="select">
+            <column name="parc" />
+        </many-to-one>
+        <property name="code" type="string">
+            <column name="code" length="20" />
+        </property>
+        <property name="couleur" type="string">
+            <column name="couleur" length="20" />
+        </property>
+        <property name="dateEntreeParc" type="date">
+            <column name="date_entree_parc" length="10" />
+        </property>
+        <property name="immatriculation" type="string">
+            <column name="immatriculation" length="50" />
+        </property>
+        <property name="numCarteGrise" type="string">
+            <column name="num_carte_grise" length="50" />
+        </property>
+        <property name="numChassis" type="string">
+            <column name="num_chassis" length="20" />
+        </property>
+        <property name="numOrdre" type="string">
+            <column name="num_ordre" length="20" />
+        </property>
+        <set name="fltMissionses" table="flt_missions" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="remorque" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltMissions" />
+        </set>
+    </class>
+</hibernate-mapping>

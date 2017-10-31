@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.stock.StkArticlesFamillesChamps" table="stk_articles_familles_champs" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comNaturesChamps" class="com.horus.ankata.core.domain.commons.ComNaturesChamps" fetch="select">
+            <column name="nature" length="5" />
+        </many-to-one>
+        <many-to-one name="comTypesChamps" class="com.horus.ankata.core.domain.commons.ComTypesChamps" fetch="select">
+            <column name="type_champ" length="5" />
+        </many-to-one>
+        <many-to-one name="stkArticlesFamilles" class="com.horus.ankata.core.domain.stock.StkArticlesFamilles" fetch="select">
+            <column name="famille" />
+        </many-to-one>
+        <property name="code" type="string">
+            <column name="code" length="20" />
+        </property>
+        <property name="estsql" type="java.lang.Boolean">
+            <column name="estsql" />
+        </property>
+        <property name="etat" type="java.lang.Boolean">
+            <column name="etat" />
+        </property>
+        <property name="libelle" type="string">
+            <column name="libelle" length="200" />
+        </property>
+        <property name="obligatoire" type="java.lang.Boolean">
+            <column name="obligatoire" />
+        </property>
+        <property name="valeur" type="string">
+            <column name="valeur" length="20" />
+        </property>
+        <property name="valeurs" type="string">
+            <column name="valeurs" />
+        </property>
+        <set name="stkArticlesChampses" table="stk_articles_champs" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="champ" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.stock.StkArticlesChamps" />
+        </set>
+    </class>
+</hibernate-mapping>

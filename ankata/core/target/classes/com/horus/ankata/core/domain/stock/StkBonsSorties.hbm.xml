@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.stock.StkBonsSorties" table="stk_bons_sorties" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comStructures" class="com.horus.ankata.core.domain.commons.ComStructures" fetch="select">
+            <column name="structure" />
+        </many-to-one>
+        <many-to-one name="fltVehicules" class="com.horus.ankata.core.domain.flotte.FltVehicules" fetch="select">
+            <column name="vehicule" />
+        </many-to-one>
+        <many-to-one name="stkBonsCommandesInternes" class="com.horus.ankata.core.domain.stock.StkBonsCommandesInternes" fetch="select">
+            <column name="bon_ci" />
+        </many-to-one>
+        <many-to-one name="stkMagasins" class="com.horus.ankata.core.domain.stock.StkMagasins" fetch="select">
+            <column name="magasin" />
+        </many-to-one>
+        <property name="dateBon" type="date">
+            <column name="date_bon" length="10" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="diagnostic" type="java.lang.Long">
+            <column name="diagnostic" />
+        </property>
+        <property name="etat" type="java.lang.Integer">
+            <column name="etat" />
+        </property>
+        <property name="numBon" type="string">
+            <column name="num_bon" length="20" />
+        </property>
+        <set name="stkBonsSortiesLigneses" table="stk_bons_sorties_lignes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="bon" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.stock.StkBonsSortiesLignes" />
+        </set>
+        <set name="fltDdesInvsPieceses" table="flt_ddes_invs_pieces" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="bon_sortie" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltDdesInvsPieces" />
+        </set>
+    </class>
+</hibernate-mapping>

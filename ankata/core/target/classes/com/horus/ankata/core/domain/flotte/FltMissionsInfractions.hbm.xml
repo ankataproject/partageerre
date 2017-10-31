@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.flotte.FltMissionsInfractions" table="flt_missions_infractions" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="fltMissions" class="com.horus.ankata.core.domain.flotte.FltMissions" fetch="select">
+            <column name="mission" />
+        </many-to-one>
+        <many-to-one name="fltTypesInfractions" class="com.horus.ankata.core.domain.flotte.FltTypesInfractions" fetch="select">
+            <column name="type_infraction" />
+        </many-to-one>
+        <property name="amende" type="java.lang.Double">
+            <column name="amende" precision="22" scale="0" />
+        </property>
+        <property name="fraisDivers" type="java.lang.Double">
+            <column name="frais_divers" precision="22" scale="0" />
+        </property>
+        <property name="libelle" type="string">
+            <column name="libelle" length="200" />
+        </property>
+        <property name="retraitPapier" type="java.lang.Boolean">
+            <column name="retrait_papier" />
+        </property>
+        <property name="retraitVehicule" type="java.lang.Boolean">
+            <column name="retrait_vehicule" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.commons.ComEmails" table="com_emails" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="dateEnvoi" type="date">
+            <column name="date_envoi" length="10" />
+        </property>
+        <property name="de" type="string">
+            <column name="de" length="200" />
+        </property>
+        <property name="errdesc" type="string">
+            <column name="errdesc" />
+        </property>
+        <property name="etat" type="string">
+            <column name="etat" length="20" />
+        </property>
+        <property name="fattach" type="string">
+            <column name="fattach" />
+        </property>
+        <property name="fname" type="string">
+            <column name="fname" length="50" />
+        </property>
+        <property name="message" type="string">
+            <column name="message" />
+        </property>
+        <property name="ref" type="string">
+            <column name="ref" length="20" />
+        </property>
+        <property name="sources" type="string">
+            <column name="sources" length="2" />
+        </property>
+        <property name="subject" type="string">
+            <column name="subject" />
+        </property>
+        <property name="tocc" type="string">
+            <column name="tocc" />
+        </property>
+        <property name="tocci" type="string">
+            <column name="tocci" />
+        </property>
+        <property name="tod" type="string">
+            <column name="tod" />
+        </property>
+    </class>
+</hibernate-mapping>

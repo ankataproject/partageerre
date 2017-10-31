@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<!--
+DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+
+Copyright (c) 2008, 2016 Oracle and/or its affiliates. All rights reserved.
+
+Oracle and Java are registered trademarks of Oracle and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+The contents of this file are subject to the terms of either the GNU
+General Public License Version 2 only ("GPL") or the Common
+Development and Distribution License("CDDL") (collectively, the
+"License"). You may not use this file except in compliance with the
+License. You can obtain a copy of the License at
+http://www.netbeans.org/cddl-gplv2.html
+or nbbuild/licenses/CDDL-GPL-2-CP. See the License for the
+specific language governing permissions and limitations under the
+License.  When distributing the software, include this License Header
+Notice in each file and include the License file at
+nbbuild/licenses/CDDL-GPL-2-CP.  Oracle designates this
+particular file as subject to the "Classpath" exception as provided
+by Oracle in the GPL Version 2 section of the License file that
+accompanied this code. If applicable, add the following below the
+License Header, with the fields enclosed by brackets [] replaced by
+your own identifying information:
+"Portions Copyrighted [year] [name of copyright owner]"
+
+If you wish your version of this file to be governed by only the CDDL
+or only the GPL Version 2, indicate your decision by adding
+"[Contributor] elects to include this software in this distribution
+under the [CDDL or GPL Version 2] license." If you do not indicate a
+single choice of license, a recipient has the option to distribute
+your version of this file under either the CDDL, the GPL Version 2 or
+to extend the choice of license to its licensees as provided above.
+However, if you add GPL Version 2 code and therefore, elected the GPL
+Version 2 license, then the option applies only if the new code is
+made subject to such option by the copyright holder.
+
+Contributor(s):
+-->
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="ankata_db"/>
+  <table-filter match-name="flt_ddes_invs_pieces"/>
+  <table-filter match-name="ach_bons_commandes"/>
+  <table-filter match-name="flt_categories"/>
+  <table-filter match-name="com_civilites"/>
+  <table-filter match-name="com_profils"/>
+  <table-filter match-name="stk_stocks"/>
+  <table-filter match-name="ach_bons_livraisons_lignes"/>
+  <table-filter match-name="com_menus"/>
+  <table-filter match-name="flt_types_charges"/>
+  <table-filter match-name="flt_remorques"/>
+  <table-filter match-name="stk_articles_familles"/>
+  <table-filter match-name="ach_devis"/>
+  <table-filter match-name="flt_vignettes"/>
+  <table-filter match-name="com_banques"/>
+  <table-filter match-name="flt_ddes_invs"/>
+  <table-filter match-name="vte_bons_livraisons"/>
+  <table-filter match-name="flt_acquisitions"/>
+  <table-filter match-name="stk_bons_commandes_internes"/>
+  <table-filter match-name="stk_magasins_articles"/>
+  <table-filter match-name="flt_assurances_comp"/>
+  <table-filter match-name="com_unites"/>
+  <table-filter match-name="ach_bons_decaissements"/>
+  <table-filter match-name="flt_ddes_invs_types"/>
+  <table-filter match-name="com_profils_users"/>
+  <table-filter match-name="flt_trajets_details"/>
+  <table-filter match-name="stk_inventaires"/>
+  <table-filter match-name="com_produits_familles"/>
+  <table-filter match-name="vte_devis"/>
+  <table-filter match-name="ach_factures_lignes"/>
+  <table-filter match-name="flt_conducteurs"/>
+  <table-filter match-name="stk_stocks_sorties"/>
+  <table-filter match-name="com_personnes"/>
+  <table-filter match-name="flt_vehicules_photos"/>
+  <table-filter match-name="com_parametres"/>
+  <table-filter match-name="flt_missions"/>
+  <table-filter match-name="flt_parcs"/>
+  <table-filter match-name="stk_articles_familles_champs"/>
+  <table-filter match-name="com_pays"/>
+  <table-filter match-name="flt_types_entretiens"/>
+  <table-filter match-name="com_sit_fams"/>
+  <table-filter match-name="flt_ddes_invs_natures"/>
+  <table-filter match-name="ach_devis_lignes"/>
+  <table-filter match-name="flt_missions_charges"/>
+  <table-filter match-name="stk_stocks_entrees"/>
+  <table-filter match-name="stk_bons_sorties"/>
+  <table-filter match-name="com_types_payements"/>
+  <table-filter match-name="com_natures_champs"/>
+  <table-filter match-name="flt_ddes_invs_pers"/>
+  <table-filter match-name="flt_activites"/>
+  <table-filter match-name="com_fonctions"/>
+  <table-filter match-name="ach_demandes"/>
+  <table-filter match-name="com_piste_audit"/>
+  <table-filter match-name="flt_marques"/>
+  <table-filter match-name="flt_visites_techniques"/>
+  <table-filter match-name="ach_bons_livraisons"/>
+  <table-filter match-name="com_types_champs"/>
+  <table-filter match-name="flt_conforts"/>
+  <table-filter match-name="com_localites"/>
+  <table-filter match-name="com_produits"/>
+  <table-filter match-name="stk_articles_champs"/>
+  <table-filter match-name="ach_factures"/>
+  <table-filter match-name="com_structures"/>
+  <table-filter match-name="vte_bons_encaissements"/>
+  <table-filter match-name="flt_missions_sinistres"/>
+  <table-filter match-name="com_clients"/>
+  <table-filter match-name="flt_ddes_invs_lieux"/>
+  <table-filter match-name="vte_bons_livraisons_lignes"/>
+  <table-filter match-name="flt_missions_infractions"/>
+  <table-filter match-name="flt_assurances"/>
+  <table-filter match-name="flt_vehicules_attachements"/>
+  <table-filter match-name="flt_trajets"/>
+  <table-filter match-name="com_users"/>
+  <table-filter match-name="stk_inventaires_lignes"/>
+  <table-filter match-name="vte_factures"/>
+  <table-filter match-name="ach_bons_commandes_lignes"/>
+  <table-filter match-name="ach_demandes_lignes"/>
+  <table-filter match-name="flt_missions_entretiens"/>
+  <table-filter match-name="com_fournisseurs"/>
+  <table-filter match-name="flt_ddes_invs_gravites"/>
+  <table-filter match-name="com_caisses"/>
+  <table-filter match-name="stk_magasins"/>
+  <table-filter match-name="flt_conducteurs_roles"/>
+  <table-filter match-name="stk_bons_sorties_lignes"/>
+  <table-filter match-name="com_monnaies"/>
+  <table-filter match-name="flt_vehicules"/>
+  <table-filter match-name="flt_missions_carburants"/>
+  <table-filter match-name="vte_devis_lignes"/>
+  <table-filter match-name="flt_vehicules_statuts"/>
+  <table-filter match-name="flt_reservation"/>
+  <table-filter match-name="com_emails"/>
+  <table-filter match-name="flt_missions_conducteurs"/>
+  <table-filter match-name="flt_modeles"/>
+  <table-filter match-name="flt_ddes_invs_priorites"/>
+  <table-filter match-name="flt_types_infractions"/>
+  <table-filter match-name="com_roles"/>
+  <table-filter match-name="vte_factures_lignes"/>
+  <table-filter match-name="stk_articles"/>
+</hibernate-reverse-engineering>

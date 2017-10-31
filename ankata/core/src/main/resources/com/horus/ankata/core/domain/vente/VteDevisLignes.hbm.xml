@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.vente.VteDevisLignes" table="vte_devis_lignes" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="vteDevis" class="com.horus.ankata.core.domain.vente.VteDevis" fetch="select">
+            <column name="devis" />
+        </many-to-one>
+        <property name="dateCharge" type="date">
+            <column name="date_charge" length="10" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="itneraire" type="string">
+            <column name="itneraire" length="200" />
+        </property>
+        <property name="montantHt" type="java.lang.Double">
+            <column name="montant_ht" precision="22" scale="0" />
+        </property>
+        <property name="nature" type="string">
+            <column name="nature" length="45" />
+        </property>
+        <property name="numBordoreau" type="string">
+            <column name="num_bordoreau" length="45" />
+        </property>
+        <property name="pu" type="java.lang.Double">
+            <column name="pu" precision="22" scale="0" />
+        </property>
+        <property name="qte" type="java.lang.Double">
+            <column name="qte" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

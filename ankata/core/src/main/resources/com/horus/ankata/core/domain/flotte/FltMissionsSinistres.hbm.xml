@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.flotte.FltMissionsSinistres" table="flt_missions_sinistres" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="fltMissions" class="com.horus.ankata.core.domain.flotte.FltMissions" fetch="select">
+            <column name="mission" />
+        </many-to-one>
+        <property name="constat" type="java.lang.Boolean">
+            <column name="constat" />
+        </property>
+        <property name="corporel" type="java.lang.Boolean">
+            <column name="corporel" />
+        </property>
+        <property name="dateAcc" type="date">
+            <column name="date_acc" length="10" />
+        </property>
+        <property name="lieu" type="string">
+            <column name="lieu" length="200" />
+        </property>
+        <property name="materiel" type="java.lang.Boolean">
+            <column name="materiel" />
+        </property>
+        <property name="mortel" type="java.lang.Boolean">
+            <column name="mortel" />
+        </property>
+        <property name="rapport" type="java.lang.Boolean">
+            <column name="rapport" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.commons.ComLocalites" table="com_localites" catalog="ankata_db" optimistic-lock="version">
+        <id name="code" type="string">
+            <column name="code" length="5" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="comPays" class="com.horus.ankata.core.domain.commons.ComPays" fetch="select">
+            <column name="pays" length="3" />
+        </many-to-one>
+        <property name="latitude" type="java.lang.Float">
+            <column name="latitude" precision="12" scale="0" />
+        </property>
+        <property name="longitude" type="java.lang.Float">
+            <column name="longitude" precision="12" scale="0" />
+        </property>
+        <property name="nom" type="string">
+            <column name="nom" length="200" />
+        </property>
+        <set name="fltTrajetsesForDepart" table="flt_trajets" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="depart" length="5" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltTrajets" />
+        </set>
+        <set name="fltTrajetsesForArrive" table="flt_trajets" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="arrive" length="5" />
+            </key>
+            <one-to-many class="com.horus.ankata.core.domain.flotte.FltTrajets" />
+        </set>
+    </class>
+</hibernate-mapping>

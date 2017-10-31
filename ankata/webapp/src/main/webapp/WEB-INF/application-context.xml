@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+    
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location">
+            <value>WEB-INF/hibernate.properties</value>
+        </property>
+    </bean>
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="${jdbc.connection.driver}" />
+        <property name="url" value="${jdbc.connection.url}" />
+        <property name="username" value="${jdbc.connection.username}" />
+        <property name="password" value="${jdbc.connection.password}" />
+    </bean>
+     <!-- ADD PERSISTENCE SUPPORT HERE (jpa, hibernate, etc) -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+         <property name="hibernateProperties">
+            <props>
+                <prop key="connection.autoReconnect">true</prop>
+                <prop key="connection.autoReconnectForPools">true</prop>
+                <prop key="connection.is-connection-validation-required">true</prop>
+                <!-- connection pool -->
+                <prop key="c3p0.min_size">10</prop>
+                <prop key="c3p0.max_size">100</prop>
+                <prop key="c3p0.timeout">10</prop>
+                <prop key="c3p0.acquireRetryAttempts">30</prop>
+                <prop key="c3p0.acquireIncrement">5</prop>
+                <prop key="c3p0.idleConnectionTestPeriod">300</prop>
+                <prop key="c3p0.initialPoolSize">20</prop>
+                <prop key="c3p0.maxPoolSize">100</prop>
+                <prop key="c3p0.maxIdleTime">300</prop>
+                <prop key="c3p0.maxStatements">50</prop>
+                <prop key="c3p0.minPoolSize">10</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect
+                </prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory
+                </prop>
+                <prop key="hibernate.cglib.use_reflection_optimizer">false</prop>
+                <prop key="hibernate.connection.pool_size">25</prop>
+            </props>
+        </property>
+        <property name="annotatedClasses">
+			<list>
+				<!-- Entites Achats debut -->
+				<value>com.horus.ankata.core.domain.achat.AchBonsCommandes</value>
+				<value>com.horus.ankata.core.domain.achat.AchBonsCommandesLignes</value>
+				<value>com.horus.ankata.core.domain.achat.AchBonsDecaissements</value>
+				<value>com.horus.ankata.core.domain.achat.AchBonsLivraisons</value>
+				<value>com.horus.ankata.core.domain.achat.AchBonsLivraisonsLignes</value>
+				<value>com.horus.ankata.core.domain.achat.AchDemandes</value>
+				<value>com.horus.ankata.core.domain.achat.AchDemandesLignes</value>
+				<value>com.horus.ankata.core.domain.achat.AchDevis</value>
+				<value>com.horus.ankata.core.domain.achat.AchDevisLignes</value>
+				<value>com.horus.ankata.core.domain.achat.AchFactures</value>
+				<value>com.horus.ankata.core.domain.achat.AchFacturesLignes</value>
+				<!-- Entites Achats fin -->
+
+				<!-- Entites Common debut -->
+				<value>com.horus.ankata.core.domain.commons.ComBanques</value>
+				<value>com.horus.ankata.core.domain.commons.ComCaisses</value>
+				<value>com.horus.ankata.core.domain.commons.ComCivilites</value>
+				<value>com.horus.ankata.core.domain.commons.ComClients</value>
+				<value>com.horus.ankata.core.domain.commons.ComEmails</value>
+				<value>com.horus.ankata.core.domain.commons.ComFonctions</value>
+				<value>com.horus.ankata.core.domain.commons.ComFournisseurs</value>
+				<value>com.horus.ankata.core.domain.commons.ComLocalites</value>
+				<value>com.horus.ankata.core.domain.commons.ComMenus</value>
+				<value>com.horus.ankata.core.domain.commons.ComMonnaies</value>
+				<value>com.horus.ankata.core.domain.commons.ComNaturesChamps</value>
+				<value>com.horus.ankata.core.domain.commons.ComParametres</value>
+				<value>com.horus.ankata.core.domain.commons.ComPays</value>
+				<value>com.horus.ankata.core.domain.commons.ComPersonnes</value>
+				<value>com.horus.ankata.core.domain.commons.ComPisteAudit</value>
+				<value>com.horus.ankata.core.domain.commons.ComProduits</value>
+				<value>com.horus.ankata.core.domain.commons.ComProduitsFamilles</value>
+				<value>com.horus.ankata.core.domain.commons.ComProfils</value>
+				<value>com.horus.ankata.core.domain.commons.ComProfilsUsers</value>
+				<value>com.horus.ankata.core.domain.commons.ComRoles</value>
+				<value>com.horus.ankata.core.domain.commons.ComSitFams</value>
+				<value>com.horus.ankata.core.domain.commons.ComStructures</value>
+				<value>com.horus.ankata.core.domain.commons.ComTypesChamps</value>
+				<value>com.horus.ankata.core.domain.commons.ComTypesPayements</value>
+				<value>com.horus.ankata.core.domain.commons.ComUnites</value>
+				<value>com.horus.ankata.core.domain.commons.ComUsers</value>
+				<!-- Entites Common fin -->
+
+				<!-- Entites Flotte debut -->
+				<value>com.horus.ankata.core.domain.flotte.FltAcquisitions</value>
+				<value>com.horus.ankata.core.domain.flotte.FltActivites</value>
+				<value>com.horus.ankata.core.domain.flotte.FltAssurances</value>
+				<value>com.horus.ankata.core.domain.flotte.FltAssurancesComp</value>
+				<value>com.horus.ankata.core.domain.flotte.FltCategories</value>
+				<value>com.horus.ankata.core.domain.flotte.FltConducteurs</value>
+				<value>com.horus.ankata.core.domain.flotte.FltConducteursRoles</value>
+				<value>com.horus.ankata.core.domain.flotte.FltConforts</value>
+				<value>com.horus.ankata.core.domain.flotte.FltDdesInvs</value>
+				<value>com.horus.ankata.core.domain.flotte.FltDdesInvsGravites</value>
+				<value>com.horus.ankata.core.domain.flotte.FltDdesInvsLieux</value>
+				<value>com.horus.ankata.core.domain.flotte.FltDdesInvsNatures</value>
+				<value>com.horus.ankata.core.domain.flotte.FltDdesInvsPers</value>
+				<value>com.horus.ankata.core.domain.flotte.FltDdesInvsPieces</value>
+				<value>com.horus.ankata.core.domain.flotte.FltDdesInvsPriorites</value>
+				<value>com.horus.ankata.core.domain.flotte.FltDdesInvsTypes</value>
+				<value>com.horus.ankata.core.domain.flotte.FltMarques</value>
+				<value>com.horus.ankata.core.domain.flotte.FltMissions</value>
+				<value>com.horus.ankata.core.domain.flotte.FltMissionsCarburants</value>
+				<value>com.horus.ankata.core.domain.flotte.FltMissionsCharges</value>
+				<value>com.horus.ankata.core.domain.flotte.FltMissionsConducteurs</value>
+				<value>com.horus.ankata.core.domain.flotte.FltMissionsEntretiens</value>
+				<value>com.horus.ankata.core.domain.flotte.FltMissionsInfractions</value>
+				<value>com.horus.ankata.core.domain.flotte.FltMissionsSinistres</value>
+				<value>com.horus.ankata.core.domain.flotte.FltModeles</value>
+				<value>com.horus.ankata.core.domain.flotte.FltParcs</value>
+				<value>com.horus.ankata.core.domain.flotte.FltRemorques</value>
+				<value>com.horus.ankata.core.domain.flotte.FltReservation</value>
+				<value>com.horus.ankata.core.domain.flotte.FltTrajets</value>
+				<value>com.horus.ankata.core.domain.flotte.FltTrajetsDetails</value>
+				<value>com.horus.ankata.core.domain.flotte.FltTypesCharges</value>
+				<value>com.horus.ankata.core.domain.flotte.FltTypesEntretiens</value>
+				<value>com.horus.ankata.core.domain.flotte.FltTypesInfractions</value>
+				<value>com.horus.ankata.core.domain.flotte.FltVehicules</value>
+				<value>com.horus.ankata.core.domain.flotte.FltVehiculesAttachements</value>
+				<value>com.horus.ankata.core.domain.flotte.FltVehiculesPhotos</value>
+				<value>com.horus.ankata.core.domain.flotte.FltVehiculesStatuts</value>
+				<value>com.horus.ankata.core.domain.flotte.FltVignettes</value>
+				<value>com.horus.ankata.core.domain.flotte.FltVisitesTechniques</value>
+				<!-- Entites Flotte Fin -->
+				<!-- Entites Stock debut -->
+				<value>com.horus.ankata.core.domain.stock.StkArticles</value>
+				<value>com.horus.ankata.core.domain.stock.StkArticlesChamps</value>
+				<value>com.horus.ankata.core.domain.stock.StkArticlesFamilles</value>
+				<value>com.horus.ankata.core.domain.stock.StkArticlesFamillesChamps</value>
+				<value>com.horus.ankata.core.domain.stock.StkBonsCommandesInternes</value>
+				<value>com.horus.ankata.core.domain.stock.StkBonsSorties</value>
+				<value>com.horus.ankata.core.domain.stock.StkBonsSortiesLignes</value>
+				<value>com.horus.ankata.core.domain.stock.StkInventaires</value>
+				<value>com.horus.ankata.core.domain.stock.StkInventairesLignes</value>
+				<value>com.horus.ankata.core.domain.stock.StkMagasins</value>
+				<value>com.horus.ankata.core.domain.stock.StkMagasinsArticles</value>
+				<value>com.horus.ankata.core.domain.stock.StkStocks</value>
+				<value>com.horus.ankata.core.domain.stock.StkStocksEntrees</value>
+				<value>com.horus.ankata.core.domain.stock.StkStocksSorties</value>
+				<!-- Entites Stock debut -->
+				<!-- Entites Vente debut -->
+				<value>com.horus.ankata.core.domain.vente.VteBonsEncaissements</value>
+				<value>com.horus.ankata.core.domain.vente.VteBonsLivraisons</value>
+				<value>com.horus.ankata.core.domain.vente.VteBonsLivraisonsLignes</value>
+				<value>com.horus.ankata.core.domain.vente.VteDevis</value>
+				<value>com.horus.ankata.core.domain.vente.VteDevisLignes</value>
+				<value>com.horus.ankata.core.domain.vente.VteFactures</value>
+				<value>com.horus.ankata.core.domain.vente.VteFacturesLignes</value>
+				<!-- Entites Vente fin -->
+			</list>
+		</property>
+    </bean>
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+     <tx:annotation-driven transaction-manager="transactionManager" />
+    <context:annotation-config />
+    <context:component-scan base-package="com.horus.ankata.core.domain" />
+    <context:component-scan base-package="com.horus.ankata.core.dao" />
+    <context:component-scan base-package="com.horus.ankata.core.service" />
+    <context:component-scan base-package="com.horus.ankata.core.beans" /> 
+    <context:component-scan base-package="com.horus.ankata.web.beans" /> 
+     <context:component-scan base-package="com.horus.ankata" /> 
+    
+</beans>

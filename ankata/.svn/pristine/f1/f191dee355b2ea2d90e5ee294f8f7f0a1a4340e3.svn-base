@@ -1,0 +1,43 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.horus.ankata.core.beans;
+
+
+import com.horus.ankata.core.domain.commons.ComStructures;
+import com.horus.ankata.core.service.AdminSrv;
+import java.io.Serializable;
+import java.util.List;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+import javax.faces.validator.ValidatorException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+/**
+ *
+ * @author babacar
+ */
+@Component("structBean")
+@Scope("session")
+public class ComStructureBeans  implements Serializable{
+    	
+    private static final long serialVersionUID = 1L;
+    
+    @Autowired
+    private AdminSrv adminSrv;
+    
+    private ComStructures item;
+    private List<ComStructures> items;
+    
+    public void valideCode(FacesContext context, UIComponent component,Object value)throws ValidatorException{
+       String svalue= (String) value;
+       item.setCode(svalue);
+       if(item.getCode()!=null){
+           
+       }
+    }
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.commons.ComParametres" table="com_parametres" catalog="ankata_db" optimistic-lock="version">
+        <id name="code" type="string">
+            <column name="code" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="dc" type="timestamp">
+            <column name="dc" length="19" />
+        </property>
+        <property name="du" type="timestamp">
+            <column name="du" length="19" />
+        </property>
+        <property name="format" type="string">
+            <column name="format" length="20" />
+        </property>
+        <property name="libelle" type="string">
+            <column name="libelle" length="250" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="20" />
+        </property>
+        <property name="ucid" type="java.lang.Long">
+            <column name="ucid" />
+        </property>
+        <property name="uuid" type="java.lang.Long">
+            <column name="uuid" />
+        </property>
+        <property name="valeurs" type="string">
+            <column name="valeurs" />
+        </property>
+        <property name="value" type="string">
+            <column name="value" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

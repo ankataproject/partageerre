@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 oct. 2017 16:01:15 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.horus.ankata.core.domain.stock.StkInventairesLignes" table="stk_inventaires_lignes" catalog="ankata_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="stkInventaires" class="com.horus.ankata.core.domain.stock.StkInventaires" fetch="select">
+            <column name="inventaire" />
+        </many-to-one>
+        <property name="code" type="string">
+            <column name="code" length="20" />
+        </property>
+        <property name="depot" type="string">
+            <column name="depot" length="45" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="famille" type="string">
+            <column name="famille" length="45" />
+        </property>
+        <property name="libelleArticle" type="string">
+            <column name="libelle_article" length="45" />
+        </property>
+        <property name="nbrPiece" type="java.lang.Integer">
+            <column name="nbr_piece" />
+        </property>
+        <property name="pump" type="java.lang.Double">
+            <column name="pump" precision="22" scale="0" />
+        </property>
+        <property name="pumpTotal" type="java.lang.Double">
+            <column name="pump_total" precision="22" scale="0" />
+        </property>
+        <property name="qteUtil" type="java.lang.Integer">
+            <column name="qte_util" />
+        </property>
+        <property name="quantite" type="java.lang.Integer">
+            <column name="quantite" />
+        </property>
+        <property name="unite" type="string">
+            <column name="unite" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>
